@@ -1,0 +1,16 @@
+#img-teste{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#teste{
+    border-radius: 20px;
+    max-width: 350px;
+    height: auto;
+}
+
+.topo{
+    margin-top: 50px;
+}

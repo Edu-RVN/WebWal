@@ -1,0 +1,225 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Akame - Hair Salon HTML Template</title>
+
+    <link rel="icon" href="~/Content/TemplateAk/img/core-img/favicon.ico">
+
+    <link href="~/Content/TemplateAk/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateAk/css/magnific-popup.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateAk/css/owl.carousel.min.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateAk/css/default-assets/audioplayer.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateAk/css/default-assets/classy-nav.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
+    
+    <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
+
+    @*<link rel="stylesheet" href="style.css">*@
+
+    <link href="~/Content/TemplateAk/css/default-assets/style.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateD/css/owl.carousel.min.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateD/css/slicknav.min.css" rel="stylesheet" />
+    <link href="~/Content/TemplateD/css/style.css" rel="stylesheet" />
+
+    <link href="~/Content/TemplateAK/css/meuCss/cliente.css" rel="stylesheet" />
+
+
+
+
+</head>
+<body>
+
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+
+    <header class="header-area">
+
+        @*<div class="top-header-area">
+                <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                        <div class="col-5">
+                            <div class="top-header-content">
+                                <p>Welcome to hair salon!</p>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="top-header-content text-right">
+                                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Mon-Sat: 8.00 to 17.00 <span class="mx-2"></span> | <span class="mx-2"></span> <i class="fa fa-phone" aria-hidden="true"></i> Call us: (+12)-345-6789</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+
+        <div class="main-header-area">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+
+                    <nav class="classy-navbar justify-content-between" id="akameNav">
+
+                        <a class="nav-brand" href="index.html"><img src="~/Content/TemplateAk/img/core-img/logo.png" alt=""></a>
+
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <div class="classy-menu">
+
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li class="active"><a href="@Url.Action("Index","Home")">Inicio</a></li>
+                                    <li>
+                                        @*<a href="#">Pages</a>
+                                            <ul class="dropdown">
+                                                <li><a href="@Url.Action("Index","Home")">- Home</a></li>
+                                                <li><a href="@Url.Action("About","Home")">- About Us</a></li>
+                                                <li><a href="./service.html">- Services</a></li>
+                                                <li><a href="./portfolio.html">- Portfolio</a></li>
+                                                <li><a href="./blog.html">- Blog</a></li>
+                                                <li><a href="./single-blog.html">- Blog Details</a></li>
+                                                <li><a href="@Url.Action("Contact","Home")">- Contact</a></li>
+                                                <li>
+                                                    <a href="#">- Dropdown</a>
+                                                    <ul class="dropdown">
+                                                        <li><a href="#">- Dropdown Item</a></li>
+                                                        <li><a href="#">- Dropdown Item</a></li>
+                                                        <li><a href="#">- Dropdown Item</a></li>
+                                                        <li><a href="#">- Dropdown Item</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>*@
+                                    </li>
+                                    <li><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li>
+                                    <li><a href="@Url.Action("Services","Home")">Services</a></li>
+                                    <li><a href="@Url.Action("About","Home")">About Us</a></li>
+                                    <li><a href="@Url.Action("Blog","Home")">Blog</a></li>
+                                    <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
+                                    <li><a href="@Url.Action("Customer","Home")">Cliente</a></li>
+                                </ul>
+
+                                <div class="cart-icon ml-5 mt-4 mt-lg-0">
+                                    <a href="#"><i class="icon_cart"></i></a>
+                                </div>
+
+                                <div class="book-now-btn ml-5 mt-4 mt-lg-0 ml-md-4">
+                                    <a href="#" class="btn akame-btn">Book Now</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+    <footer class="footer-area section-padding-80-0">
+        <div class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-12 col-sm-6 col-md-4">
+                    <div class="single-footer-widget mb-80">
+
+                        <a href="#" class="footer-logo"><img src="~/Content/TemplateAk/img/core-img/logo.png" alt=""></a>
+                        <p class="mb-30">We would love to serve you and let you enjoy your culinary experience. Excepteur sint occaecat cupidatat non proident.</p>
+
+                        <div class="copywrite-text">
+                            <p>
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-4 col-xl-3">
+                    <div class="single-footer-widget mb-80">
+
+                        <h4 class="widget-title">Opening times</h4>
+
+                        <div class="open-time">
+                            <p>Monday: Friday: 10.00 - 23.00</p>
+                            <p>Saturday: 10.00 - 19.00</p>
+                        </div>
+
+                        <div class="social-info">
+                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-xl-3">
+                    <div class="single-footer-widget mb-80">
+
+                        <h4 class="widget-title">Contact Us</h4>
+
+                        <div class="contact-address">
+                            <p>Tel: (+12) 345 678 910</p>
+                            <p>E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a123f3636357439353635283633381a3d373b333674393537">[email&#160;protected]</a></p>
+                            <p>Address: Iris Watson, P.O. Box 283 8562 Fusce Rd, NY</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+    <script src="~/Content/TemplateAk/js/jquery.min.js"></script>
+
+
+    <script src="~/Content/TemplateAk/js/popper.min.js"></script>
+
+    <script src="~/Content/TemplateAk/js/bootstrap.min.js"></script>
+
+    <script src="~/Content/TemplateAk/js/akame.bundle.js"></script>
+
+    <script src="~/Content/TemplateAk/js/default-assets/active.js"></script>
+
+
+    <script src="~/Content/TemplateD/js/owl.carousel.min.js"></script>
+    <script src="~/Content/TemplateD/js/jquery.slicknav.min.js"></script>
+    <script src="~/Content/TemplateD/js/jquery.nicescroll.min.js"></script>
+
+    @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+          <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+          </script>
+          <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7e43f1f1f8601aa6","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>*@
+</body>
+</html>
