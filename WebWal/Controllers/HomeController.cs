@@ -43,6 +43,11 @@ namespace WebWal.Controllers
 
             return View();
         }
+        public ActionResult CustomerNew()
+        {
+
+            return View();
+        }
 
     }
 }

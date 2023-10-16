@@ -21,7 +21,7 @@
     <link href="~/Content/TemplateAk/css/default-assets/classy-nav.css" rel="stylesheet" />
 
     <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
-    
+
     <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
 
     @*<link rel="stylesheet" href="style.css">*@
@@ -114,6 +114,14 @@
                                     <li><a href="@Url.Action("Blog","Home")">Blog</a></li>
                                     <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
                                     <li><a href="@Url.Action("Customer","Home")">Cliente</a></li>
+                                    <li>
+                                        <a href="#">Cliente</a>
+                                        <ul class="dropdown">
+                                            <li><a href="@Url.Action("CustomerNew","Home")">- Novo Ciente</a></li>
+                                            <li><a href="@Url.Action("Customer","Home")">- Consultar</a></li>
+                                            
+                                        </ul>
+                                    </li>
                                 </ul>
 
                                 <div class="cart-icon ml-5 mt-4 mt-lg-0">
