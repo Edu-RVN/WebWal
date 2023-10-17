@@ -48,6 +48,12 @@ namespace WebWal.Controllers
 
             return View();
         }
+        
+        public ActionResult CustomerAppointment()
+        {
+
+            return View();
+        }
 
     }
 }
