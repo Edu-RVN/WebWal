@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebWal.BLL;
+using WebWal.Models;
 
 namespace WebWal.Controllers
 {
@@ -58,6 +60,19 @@ namespace WebWal.Controllers
 
         //requisicoes http
 
+        BLL_Cliente bllCad = new BLL_Cliente();
+        [HttpPost]
 
+        public ActionResult CadastrarCliente(Cliente dados)
+        {
+           
+            var ret = bllCad.CadastrarCliente(dados);
+                       
+            return Json(new
+            {
+                retorno = ret
+            });
+
+        }
     }
 }
