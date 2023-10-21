@@ -11,6 +11,17 @@
     height: auto;
 }
 
-.topo{
-    margin-top: 50px;
+.checkbox-container{
+  padding-bottom: 20px;
+}
+
+#titulo-tratamento{
+  text-align: center;
+  margin-top: 15px;
+  
+}
+
+#main-tratamento{
+  background-color: #f6f9f9 ;
+  padding-bottom: 30px;
 }

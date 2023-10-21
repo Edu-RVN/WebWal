@@ -121,6 +121,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +149,7 @@
     <Content Include="Content\TemplateAk\css\font-awesome.min.css" />
     <Content Include="Content\TemplateAk\css\fonts\ElegantIcons.svg" />
     <Content Include="Content\TemplateAk\css\magnific-popup.css" />
+    <Content Include="Content\TemplateAk\css\meuCss\cliente.css" />
     <Content Include="Content\TemplateAk\css\owl.carousel.min.css" />
     <Content Include="Content\TemplateAk\css\style.css" />
     <Content Include="Content\TemplateAk\img\bg-img\1.jpg" />
@@ -307,11 +309,13 @@
     <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.7.1.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\MyScripts\AdmCliente.js" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -336,7 +340,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

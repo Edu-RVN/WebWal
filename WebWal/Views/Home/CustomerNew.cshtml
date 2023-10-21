@@ -37,7 +37,7 @@
         </div>
         <div class="row" id="img-teste">
             <div class="col-12"></div>
-            <form action="#" method="post" class="akame-contact-form border-0 p-0">
+            <form  id="img-teste" action="#" method="post" class="akame-contact-form border-0 p-0">
                 <div class="row">
                     <img id="teste" src="~/Content/TemplateAk/img/bg-img/33.jpg" alt="">
                 </div>
@@ -54,42 +54,44 @@
                 <form action="#" method="post" class="akame-contact-form border-0 p-0">
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="text" name="message-name" class="form-control mb-30" placeholder="Nome">
+                            <input type="text" id="txtNome" class="form-control mb-30" placeholder="Nome">
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" name="message-name" class="form-control mb-30" placeholder="Endereço">
+                            <input type="text" id="txtCep" class="form-control mb-30" placeholder="CEP">
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" name="message-name" class="form-control mb-30" placeholder="Bairro">
+                            <input type="text" id="txtEndereco" class="form-control mb-30" placeholder="Endereço">
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" name="message-name" class="form-control mb-30" placeholder="Cidade">
+                            <input type="text" id="txtCidade" class="form-control mb-30" placeholder="Cidade">
                         </div>
                         <div class="col-lg-6">
-                            <input type="date" name="message-name" class="form-control mb-30" placeholder="Data Nascimento">
+                            <input type="date" id="txtDtNasc" class="form-control mb-30" placeholder="Data Nascimento">
+                        </div>
+
+                        <div class="col-lg-6">
+                            <input type="text" id="txtIdade" disabled="disabled" class="form-control mb-30" placeholder="idade">
                         </div>
                         <div class="col-lg-6">
-                            <input type="email" name="message-email" class="form-control mb-30" placeholder="Email">
+                            <input type="email" id="txtEmail" class="form-control mb-30" placeholder="Email">
                         </div>
                         <div class="col-lg-6">
-                            <input type="number" name="message-email" max="99" class="form-control mb-30"
-                                   placeholder="idade">
+                            <input type="text" id="txtCel" class="form-control mb-30" placeholder="Celular">
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" name="message-email" class="form-control mb-30" placeholder="Celular">
+                            <input type="text" id="txtCpf" class="form-control mb-30" placeholder="CPF">
                         </div>
                         <div class="col-lg-6">
-                            <input type="text" name="message-name" class="form-control mb-30" placeholder="CPF">
-                        </div>
-                        <div class="col-lg-6">
-                            <input type="text" name="message-name" class="form-control mb-30" placeholder="RG">
+                            <input type="text" id="txtRg" class="form-control mb-30" placeholder="RG">
                         </div>
                         <div class="col-12">
-                            <input type="file" name="arquivo" class="form-control mb-30" placeholder="Sua foto">
+                            <input type="file" id="fileFoto" class="form-control mb-30" placeholder="Sua foto">
+
                         </div>
                         <div class="col-12 text-center">
-                            <button type="submit" class="btn akame-btn btn-3 mt-15 active">Post Comment</button>
+                            <input id="btnCadCliente" type="button" class="btn akame-btn btn-3 mt-15 active" value="Cadastar" />
                         </div>
+
                     </div>
                 </form>
             </div>
