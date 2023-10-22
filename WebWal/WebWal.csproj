@@ -316,6 +316,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\MyScripts\AdmCliente.js" />
+    <Content Include="Scripts\MyScripts\AdmConsultaCliente.js" />
+    <Content Include="Scripts\MyScripts\AdmTratamento.js" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

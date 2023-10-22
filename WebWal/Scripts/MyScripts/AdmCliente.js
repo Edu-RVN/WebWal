@@ -1,9 +1,8 @@
 ﻿$(document).ready(function () {
    
     const urlAtual = window.location.pathname;
-    const urlDesejada = "/Home/CustomerNew";
-
-    if (urlAtual === urlDesejada) {
+    
+    if (urlAtual === "/Home/CustomerNew") {
 
         $("#txtCel").mask("(99) 99999-9999");
         $("#txtCpf").mask("999.999.999-99");
@@ -11,40 +10,87 @@
 
         getCustomer();
         calcularIdade();
+        validarEmail();
     } 
 
 
 
 });
 
+
+
+
+
 function getCustomer() {
 
-    $("#btnCadCliente").on("click", function () {
+    
 
-        
-        if (validarEmail($("#txtEmail").val())) {
-            
-        
+    $("#btnCadCliente").on("click", function () {
+                       
+        var NomeCli = $("#txtNome").val();
+        var CepCli = $("#txtCep").val();
+        var EnderecoCli = $("#txtEndereco").val();
+        var CidadeCli = $("#txtCidade").val();
+        var DtNascimentoCli = $("#txtDtNasc").val();
+        var EmailCli = $("#txtEmail").val();
+        var CelularCli = $("#txtCel").val();
+        var CpfCli = $("#txtCpf").val();
+        var RgCli = $("#txtRg").val();
+
+        if (validarCampos()) {
+    
         var customer = {
-            Nome: $("#txtNome").val(),
-            Cep: $("#txtCep").val(),
-            Endereco: $("#txtEndereco").val(),
-            Cidade: $("#txtCidade").val(),
-            DataNascimento: $("#txtDtNasc").val(),
-            Celular: $("#txtCel").val(),
-            Email: $("#txtEmail").val(),
-            Cpf: $("#txtCpf").val(),
-            Rg: $("#txtRg").val()
+            Nome: NomeCli,
+            Cep: CepCli,
+            Endereco: EnderecoCli,
+            Cidade: CidadeCli,
+            DataNascimento: DtNascimentoCli,
+            Celular: CelularCli,
+            Email:EmailCli,
+            Cpf: CpfCli,
+            Rg: RgCli
           
         }
         var me = JSON.stringify(customer);
       
         alert(me);
-}
-
+ }
 
 
     })
+
+}
+
+function validarCampos() {
+    debugger
+    var continuar = true;
+
+    if ($("#txtNome").val() == "") {
+        alert("o nome é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+       
+    }
+    if ($("#txtCep").val() === "") {
+        alert("o CEP é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+      
+    }
+    if ($("#txtEmail").val() === "") {
+        alert("o CEP é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+
+        continuar = true;
+
+    }
+return continuar
 
 }
 
@@ -66,10 +112,21 @@ function calcularIdade() {
     });
         
    
-}
-function validarEmail(email) {
-        // Expressão regular para validar o formato do e-mail
+    }
+
+function validarEmail() {
+    debugger
+    $("#txtEmail").on("focusout", function () {
+
+        email = $("#txtEmail").val();
         const regexEmail = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
 
-        return regexEmail.test(email);
-    }
+        if (!regexEmail.test(email)) {
+            alert("email invalido")
+        }
+
+    });
+
+
+
+}
