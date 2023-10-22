@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-   
+
     const urlAtual = window.location.pathname;
     
     if (urlAtual === "/Home/CustomerNew") {
@@ -23,38 +23,30 @@
 
 function getCustomer() {
 
-    
-
     $("#btnCadCliente").on("click", function () {
-                       
-        var NomeCli = $("#txtNome").val();
-        var CepCli = $("#txtCep").val();
-        var EnderecoCli = $("#txtEndereco").val();
-        var CidadeCli = $("#txtCidade").val();
-        var DtNascimentoCli = $("#txtDtNasc").val();
-        var EmailCli = $("#txtEmail").val();
-        var CelularCli = $("#txtCel").val();
-        var CpfCli = $("#txtCpf").val();
-        var RgCli = $("#txtRg").val();
 
-        if (validarCampos()) {
-    
-        var customer = {
-            Nome: NomeCli,
-            Cep: CepCli,
-            Endereco: EnderecoCli,
-            Cidade: CidadeCli,
-            DataNascimento: DtNascimentoCli,
-            Celular: CelularCli,
-            Email:EmailCli,
-            Cpf: CpfCli,
-            Rg: RgCli
-          
+
+        if (validarEmail($("#txtEmail").val())) {
+
+
+            var customer = {
+                Nome: $("#txtNome").val(),
+                Cep: $("#txtCep").val(),
+                Endereco: $("#txtEndereco").val(),
+                Cidade: $("#txtCidade").val(),
+                DataNascimento: $("#txtDtNasc").val(),
+                Celular: $("#txtCel").val(),
+                Email: $("#txtEmail").val(),
+                Cpf: $("#txtCpf").val(),
+                Rg: $("#txtRg").val()
+
+            }
+            var me = JSON.stringify(customer);
+
+            alert(me);
+
+            requisicaoAssincrona("POST", "../Home/CadastrarCliente", customer, sucessCustomer, errorCustomer);
         }
-        var me = JSON.stringify(customer);
-      
-        alert(me);
- }
 
 
     })
@@ -94,19 +86,28 @@ return continuar
 
 }
 
+function sucessCustomer(json) {
+sucessoNotificacao("Cadastro realizado com sucesso!")
+}
+
+function errorCustomer(json) {
+
+}
+
+
 function calcularIdade() {
-   
+
     $("#txtDtNasc").on("focusout", function () {
 
         let dataNascimento = new Date($("#txtDtNasc").val());
-               
+
         let dataAtual = new Date();
-        
+
         let diferencaEmMilissegundos = dataAtual - dataNascimento;
-        
+
         let idadeEmAnos = Math.floor(diferencaEmMilissegundos / (365.25 * 24 * 60 * 60 * 1000));
 
-       
+
         $("#txtIdade").val(idadeEmAnos);
 
     });
