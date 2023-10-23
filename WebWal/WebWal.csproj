@@ -424,6 +424,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\MyScripts\AdmCliente.js" />
+    <Content Include="Scripts\MyScripts\AdmConsultaCliente.js" />
+    <Content Include="Scripts\MyScripts\AdmTratamento.js" />
     <Content Include="Scripts\MyScripts\Global.js" />
     <Content Include="Scripts\notifications\bootbox.min.js" />
     <Content Include="Scripts\notifications\jgrowl.min.js" />

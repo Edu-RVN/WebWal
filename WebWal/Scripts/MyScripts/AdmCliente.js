@@ -26,7 +26,7 @@ function getCustomer() {
     $("#btnCadCliente").on("click", function () {
 
 
-        if (validarEmail($("#txtEmail").val())) {
+        if (validarCampos()) {
 
 
             var customer = {
@@ -41,16 +41,24 @@ function getCustomer() {
                 Rg: $("#txtRg").val()
 
             }
-            var me = JSON.stringify(customer);
-
-            alert(me);
-
+           
             requisicaoAssincrona("POST", "../Home/CadastrarCliente", customer, sucessCustomer, errorCustomer);
         }
 
-
     })
 
+}
+
+function sucessCustomer(json) {
+    debugger
+
+    var obj = json.retorno;
+    limparCampos();
+alert(obj)
+}
+
+function errorCustomer(json) {
+    
 }
 
 function validarCampos() {
@@ -63,36 +71,77 @@ function validarCampos() {
         return continuar;
     } else {
         continuar = true;
-       
     }
+
     if ($("#txtCep").val() === "") {
         alert("o CEP é obrigatório!");
         continuar = false;
         return continuar;
     } else {
         continuar = true;
-      
     }
+
     if ($("#txtEmail").val() === "") {
-        alert("o CEP é obrigatório!");
+        alert("o Email é obrigatório!");
         continuar = false;
         return continuar;
     } else {
-
         continuar = true;
-
     }
+
+    if ($("#txtEndereco").val() == "") {
+        alert("o Endereço é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+    }
+
+    if ($("#txtCidade").val() == "") {
+        alert("a Cidade é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+    }
+
+    if ($("#txtDtNasc").val() == "") {
+        alert("a Data de Nascimento é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+    }
+
+    if ($("#txtCel").val() == "") {
+        alert("o Celular é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+    }
+
+    if ($("#txtCpf").val() == "") {
+        alert("o Cpf é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+    }
+
+    if ($("#txtRg").val() == "") {
+        alert("o Rg é obrigatório!");
+        continuar = false;
+        return continuar;
+    } else {
+        continuar = true;
+    }
+
+
 return continuar
 
 }
 
-function sucessCustomer(json) {
-sucessoNotificacao("Cadastro realizado com sucesso!")
-}
-
-function errorCustomer(json) {
-
-}
 
 
 function calcularIdade() {
@@ -129,5 +178,19 @@ function validarEmail() {
     });
 
 
+
+}
+
+function limparCampos() {
+
+    $("#txtNome").val("");
+    $("#txtCep").val("");
+    $("#txtEndereco").val("");
+    $("#txtCidade").val("");
+    $("#txtDtNasc").val("");
+    $("#txtCel").val("");
+    $("#txtEmail").val("");
+    $("#txtCpf").val("");
+    $("#txtRg").val("");
 
 }
