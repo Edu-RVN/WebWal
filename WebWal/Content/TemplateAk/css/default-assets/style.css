@@ -412,7 +412,7 @@ input:focus {
   box-shadow: none; }
 
 .akame-btn {
-  font-family: "Playfair Display", serif;
+  /*font-family: Arial, serif;*/
   position: relative;
   z-index: 1;
   min-width: 150px;

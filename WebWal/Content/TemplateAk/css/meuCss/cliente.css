@@ -29,3 +29,30 @@
 .btnAvancar button{
   text-align: center;
 }
+
+#custom-checkbox{
+  width: 22px;
+  height: 22px;
+  border-radius: 20px;
+
+}
+
+#txt-pontos{
+  padding-left: 10px;
+  text-align: center;
+  padding-right: 10px;
+}
+
+.select-personalizado{
+  border: 1px solid #ced4da;
+  padding: 3px;
+  border-radius: 5px;
+  list-style: none;
+  color:  #9c9d9ed3;
+  
+}
+
+.select-personalizado:focus{
+  border: 1px solid #bd9205;
+  outline: none;
+}
