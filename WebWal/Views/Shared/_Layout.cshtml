@@ -20,7 +20,9 @@
 
     <link href="~/Content/TemplateAk/css/default-assets/classy-nav.css" rel="stylesheet" />
 
-    <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
+    @*<link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />*@
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -99,7 +101,7 @@
 
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li class="active"><a href="@Url.Action("Index","Home")">Inicio</a></li>
+                                    <li ><a href="@Url.Action("Index","Home")">Inicio</a></li>
                                     <li>
                                         @*<a href="#">Pages</a>
                                             <ul class="dropdown">
@@ -121,11 +123,11 @@
                                                 </li>
                                             </ul>*@
                                     </li>
-                                    <li><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li>
-                                    <li><a href="@Url.Action("Services","Home")">Services</a></li>
-                                    <li><a href="@Url.Action("About","Home")">About Us</a></li>
-                                    <li><a href="@Url.Action("Blog","Home")">Blog</a></li>
-                                    <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
+                                    @* <li><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li> *@
+                                    <li><a href="@Url.Action("Services","Home")">Serviços</a></li>
+                                    <li><a href="@Url.Action("About","Home")">Nossa Empresa</a></li>
+                                    @* <li><a href="@Url.Action("Blog","Home")">Blog</a></li> *@
+                                    <li><a href="@Url.Action("Contact","Home")">Contato</a></li>
                                     <li>
                                         <a href="#">Cliente</a>
                                         <ul class="dropdown">
@@ -141,9 +143,9 @@
                                     <a href="#"><i class="icon_cart"></i></a>
                                 </div>
 
-                                <div class="book-now-btn ml-5 mt-4 mt-lg-0 ml-md-4">
+                                @* <div class="book-now-btn ml-5 mt-4 mt-lg-0 ml-md-4">
                                     <a href="#" class="btn akame-btn">Book Now</a>
-                                </div>
+                                </div> *@
                             </div>
 
                         </div>
@@ -189,11 +191,12 @@
                         </div>
 
                         <div class="social-info">
-                            <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                            <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                            <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                            <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="google-plus"><i class="fab fa-google-plus"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
                         </div>
+
                     </div>
                 </div>
 
