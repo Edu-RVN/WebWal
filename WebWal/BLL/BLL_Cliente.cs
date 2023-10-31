@@ -12,9 +12,13 @@ namespace WebWal.BLL
         DAL_Cliente dalCad = new DAL_Cliente();
         public string CadastrarCliente(Cliente dados)
         {
-           
-
             var ret = dalCad.CadastrarCliente(dados);
+
+            return ret;
+        } 
+        public string ObterListaCliente()
+        {
+            var ret = dalCad.ObterListaClientes();
 
             return ret;
         }

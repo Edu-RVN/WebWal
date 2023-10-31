@@ -74,5 +74,23 @@ namespace WebWal.Controllers
             });
 
         }
+
+         [HttpPost]
+
+        public ActionResult ObterListaCliente()
+        {
+           
+            var ret = bllCad.ObterListaCliente();
+                       
+            return Json(new
+            {
+                retorno = ret
+            });
+
+        }
+
+
+
+
     }
 }

@@ -38,8 +38,8 @@ function getCustomer() {
                 Celular: $("#txtCel").val(),
                 Email: $("#txtEmail").val(),
                 Cpf: $("#txtCpf").val(),
-                Rg: $("#txtRg").val()
-
+                Rg: $("#txtRg").val(),
+                Flag:"1"
             }
            
             requisicaoAssincrona("POST", "../Home/CadastrarCliente", customer, sucessCustomer, errorCustomer);
@@ -50,11 +50,10 @@ function getCustomer() {
 }
 
 function sucessCustomer(json) {
-    debugger
 
     var obj = json.retorno;
     limparCampos();
-alert(obj)
+    sucessoNotificacao(obj)
 }
 
 function errorCustomer(json) {
@@ -62,7 +61,7 @@ function errorCustomer(json) {
 }
 
 function validarCampos() {
-    debugger
+  
     var continuar = true;
 
     if ($("#txtNome").val() == "") {
@@ -165,7 +164,7 @@ function calcularIdade() {
     }
 
 function validarEmail() {
-    debugger
+    
     $("#txtEmail").on("focusout", function () {
 
         email = $("#txtEmail").val();

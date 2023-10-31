@@ -35,15 +35,15 @@ Last Update: Jan 19, 2018
   --------------------------------------------- */
 /* Import Fonts & All CSS */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Playfair+Display:400,700");
-@import url(Content/TemplateAk/css/bootstrap.min.css);
-@import url(Content/TemplateAk/css/animate.css);
-@import url(Content/TemplateAk/css/default-assets/classy-nav.css);
-@import url(Content/TemplateAk/css/default-assets/audioplayer.css);
-@import url(Content/TemplateAk/css/owl.carousel.min.css);
-@import url(Content/TemplateAk/css/magnific-popup.css);
-@import url(Content/TemplateAk/css/font-awesome.min.css);
-@import url(Content/TemplateAk/css/style.css);
-/* :: 1.0 Reboot CSS */
+/*@import url("~/Content/TemplateAk/css/bootstrap.min.css");
+@import url(~/Content/TemplateAk/css/animate.css);
+@import url(~/Content/TemplateAk/css/default-assets/classy-nav.css);
+@import url(~/Content/TemplateAk/css/default-assets/audioplayer.css);
+@import url(~/Content/TemplateAk/css/owl.carousel.min.css);
+@import url(~/Content/TemplateAk/css/magnific-popup.css);
+@import url(~/Content/TemplateAk/css/font-awesome.min.css);
+@import url(~/Content/TemplateAk/css/style.css);
+*//* :: 1.0 Reboot CSS */
 * {
   margin: 0;
   padding: 0; }
