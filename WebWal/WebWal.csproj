@@ -248,8 +248,13 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\TemplateAk\css\animate.css" />
     <Content Include="Content\TemplateAk\css\bootstrap.min.css" />
+    <Content Include="Content\TemplateAk\css\default-assets\animate.css" />
     <Content Include="Content\TemplateAk\css\default-assets\audioplayer.css" />
+    <Content Include="Content\TemplateAk\css\default-assets\bootstrap.min.css" />
     <Content Include="Content\TemplateAk\css\default-assets\classy-nav.css" />
+    <Content Include="Content\TemplateAk\css\default-assets\font-awesome.min.css" />
+    <Content Include="Content\TemplateAk\css\default-assets\magnific-popup.css" />
+    <Content Include="Content\TemplateAk\css\default-assets\owl.carousel.min.css" />
     <Content Include="Content\TemplateAk\css\default-assets\style.css" />
     <Content Include="Content\TemplateAk\css\font-awesome.min.css" />
     <Content Include="Content\TemplateAk\css\fonts\ElegantIcons.svg" />
@@ -364,6 +369,7 @@
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="libmongocrypt.so" />
     <Content Include="libmongocrypt.dylib" />
+    <Content Include="Content\TemplateAk\css\fonts\fontawesome-webfont.eot" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\DataTable\DataTables-1.13.6\css\dataTables.bootstrap.css" />
     <Content Include="Scripts\DataTable\DataTables-1.13.6\css\dataTables.bootstrap.min.css" />

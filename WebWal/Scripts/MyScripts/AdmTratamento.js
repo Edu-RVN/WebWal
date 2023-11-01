@@ -1,5 +1,5 @@
 ﻿$(document).ready(function () {
-    debugger
+   
     const urlAtual = window.location.pathname;
 
     if (urlAtual === "/Home/CustomerAppointment") {
