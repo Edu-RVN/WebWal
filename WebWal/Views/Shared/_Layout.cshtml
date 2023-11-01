@@ -8,11 +8,11 @@
 
     <title>Instituto Equilibrio Wal Mendes</title>
 
+    @*TEMPLATE AK*@
     <link rel="icon" href="~/Content/TemplateAk/img/core-img/favicon.ico">
 
-    @*<link href="~/Content/TemplateAk/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/TemplateAk/css/bootstrap.min.css" rel="stylesheet" />*@
     <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+
     <link href="~/Content/TemplateAk/css/magnific-popup.css" rel="stylesheet" />
 
     <link href="~/Content/TemplateAk/css/owl.carousel.min.css" rel="stylesheet" />
@@ -21,28 +21,36 @@
 
     <link href="~/Content/TemplateAk/css/default-assets/classy-nav.css" rel="stylesheet" />
 
-    @*<link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />*@
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
 
-    <link href="~/Scripts/DataTable/datatables.css" rel="stylesheet" />
-
-    @*<link rel="stylesheet" href="style.css">*@
-
     <link href="~/Content/TemplateAk/css/default-assets/style.css" rel="stylesheet" />
-
-    @*<link href="~/Content/TemplateD/css/owl.carousel.min.css" rel="stylesheet" />
-
-    <link href="~/Content/TemplateD/css/slicknav.min.css" rel="stylesheet" />
-    <link href="~/Content/TemplateD/css/style.css" rel="stylesheet" />*@
-
 
     <link href="~/Content/TemplateAK/css/meuCss/cliente.css" rel="stylesheet" />
 
+    @*TEMPLATE LIMITLESS*@
+    
 
+     Global stylesheets 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="~/global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/layout.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/components.min.css" rel="stylesheet" type="text/css">
+    <link href="~/assets/css/colors.min.css" rel="stylesheet" type="text/css">
+     @*/global stylesheets 
+     Core JS files*@ 
+    <script src="~/global_assets/js/main/jquery.min.js"></script>
+    <script src="~/global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <!-- /core JS files -->
+    <!-- Theme JS files -->
+    <script src="~/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 
+    <script src="~/assets/js/app.js"></script>
+    <!-- /theme JS files -->
+    <script src="~/Scripts/MyScripts/Global.js"></script>
 
 
 
@@ -55,24 +63,7 @@
 
 
     <header class="header-area">
-
-        @*<div class="top-header-area">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-5">
-                            <div class="top-header-content">
-                                <p>Welcome to hair salon!</p>
-                            </div>
-                        </div>
-                        <div class="col-7">
-                            <div class="top-header-content text-right">
-                                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Mon-Sat: 8.00 to 17.00 <span class="mx-2"></span> | <span class="mx-2"></span> <i class="fa fa-phone" aria-hidden="true"></i> Call us: (+12)-345-6789</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>*@
-
+              
 
         <div class="main-header-area">
             <div class="classy-nav-container breakpoint-off">
@@ -94,7 +85,7 @@
 
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li ><a href="@Url.Action("Index","Home")">Inicio</a></li>
+                                    <li><a href="@Url.Action("Index","Home")">Inicio</a></li>
                                     <li>
                                         @*<a href="#">Pages</a>
                                             <ul class="dropdown">
@@ -137,8 +128,8 @@
                                 </div>
 
                                 @* <div class="book-now-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn akame-btn">Book Now</a>
-                                </div> *@
+                                        <a href="#" class="btn akame-btn">Book Now</a>
+                                    </div> *@
                             </div>
 
                         </div>
@@ -209,10 +200,7 @@
         </div>
     </footer>
 
-
-
-    @*<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>*@
-
+       
     <script src="~/Content/TemplateAk/js/jquery.min.js"></script>
 
     <script src="~/Content/TemplateAk/js/popper.min.js"></script>
@@ -223,32 +211,20 @@
 
     <script src="~/Content/TemplateAk/js/default-assets/active.js"></script>
 
-    @*<script src="~/Content/TemplateD/js/owl.carousel.min.js"></script>
-        <script src="~/Content/TemplateD/js/jquery.slicknav.min.js"></script>
-        <script src="~/Content/TemplateD/js/jquery.nicescroll.min.js"></script>*@
-
+   
     <!-- Theme JS files -->
-    <script type="text/javascript" src="~/assets/js/plugins/tables/datatables/datatables.min.js"></script>
-    <script type="text/javascript" src="~/assets/js/plugins/forms/selects/select2.min.js"></script>
+   
+    @*<script type="text/javascript" src="~/assets/js/plugins/forms/selects/select2.min.js"></script>*@
     <script src="~/Scripts/jquery.maskedinput.js"></script>
-    <script src="~/Scripts/notifications/pnotify.min.js"></script>
-    @*<script type="text/javascript" src="~/assets/js/core/app.js"></script>*@
-    <script type="text/javascript" src="~/assets/js/pages/datatables_basic.js"></script>
+    @*<script src="~/Scripts/notifications/pnotify.min.js"></script>*@
+
+
     <!-- /theme JS files -->
     @*meus scripts*@
-    <script src="~/Scripts/MyScripts/Global.js"></script>
+    
     <script src="~/Scripts/MyScripts/AdmCliente.js"></script>
     <script src="~/Scripts/MyScripts/AdmConsultaCliente.js"></script>
     <script src="~/Scripts/MyScripts/AdmTratamento.js"></script>
 
-    @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-          <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-23581568-13');
-          </script>
-          <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7e43f1f1f8601aa6","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>*@
-</body>
+   </body>
 </html>
