@@ -34,4 +34,18 @@ function exibirBotaoEnviar() {
             $("#btnEnviarTratamento").css("display", "block");;
         }
     });
+    valorPersonalizado()
+}
+
+function valorPersonalizado() {
+    $("#checkbox4").change(function () {
+        // Verifique se o checkbox está marcado (selecionado)
+        if ($(this).is(":checked")) {
+            console.log("O checkbox foi selecionado.");
+            $("#valoresPersonalizados").css("display", "block");;
+        } else {
+            console.log("O checkbox foi desmarcado.");
+            // Faça alguma coisa quando o checkbox for desmarcado
+        }
+    });
 }
