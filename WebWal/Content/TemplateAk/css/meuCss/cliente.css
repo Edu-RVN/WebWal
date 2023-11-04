@@ -58,11 +58,51 @@
 }
 
 #img-logo{
-    width:95px;
-    height:95px;
+    width:200px;
+    height:auto;
 }
 
 #img-wal{
     height:250px;
     width:250px;
+}
+
+#link-style{
+    text-decoration: none;
+}
+
+#img-servicos{
+    width:80px;
+    height:80px;
+}
+
+.welcome-area {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 15px; 
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #B5B2AC; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+
+::-webkit-scrollbar-thumb:active {
+    background: #666; 
+}
+
+#img-wall-sobre{
+    width:650px;
+    height:650px;
 }

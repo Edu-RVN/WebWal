@@ -29,7 +29,7 @@
     <link href="~/Scripts/DataTable/datatables.css" rel="stylesheet" />
 
 
-    
+
 
 
     @*<link rel="stylesheet" href="style.css">*@
@@ -67,22 +67,7 @@
 
     <header class="header-area">
 
-        @*<div class="top-header-area">
-                <div class="container h-100">
-                    <div class="row h-100 align-items-center">
-                        <div class="col-5">
-                            <div class="top-header-content">
-                                <p>Welcome to hair salon!</p>
-                            </div>
-                        </div>
-                        <div class="col-7">
-                            <div class="top-header-content text-right">
-                                <p><i class="fa fa-clock-o" aria-hidden="true"></i> Mon-Sat: 8.00 to 17.00 <span class="mx-2"></span> | <span class="mx-2"></span> <i class="fa fa-phone" aria-hidden="true"></i> Call us: (+12)-345-6789</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>*@
+
 
 
         <div class="main-header-area">
@@ -91,7 +76,7 @@
 
                     <nav class="classy-navbar justify-content-between" id="akameNav">
 
-                        <a class="nav-brand " href="index.html"><img  src="~/Content/TemplateAk/img/core-img/logo (1).png"  class="img-fluid" alt="" id="img-logo"></a>
+                        <a class="nav-brand " href="index.html"><img src="~/Content/TemplateAk/img/core-img/logo-letras.png" class="img-fluid" alt="" id="img-logo"></a>
 
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -105,28 +90,8 @@
 
                             <div class="classynav">
                                 <ul id="nav">
-                                    <li ><a href="@Url.Action("Index","Home")">Inicio</a></li>
-                                    <li>
-                                        @*<a href="#">Pages</a>
-                                            <ul class="dropdown">
-                                                <li><a href="@Url.Action("Index","Home")">- Home</a></li>
-                                                <li><a href="@Url.Action("About","Home")">- About Us</a></li>
-                                                <li><a href="./service.html">- Services</a></li>
-                                                <li><a href="./portfolio.html">- Portfolio</a></li>
-                                                <li><a href="./blog.html">- Blog</a></li>
-                                                <li><a href="./single-blog.html">- Blog Details</a></li>
-                                                <li><a href="@Url.Action("Contact","Home")">- Contact</a></li>
-                                                <li>
-                                                    <a href="#">- Dropdown</a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>*@
-                                    </li>
+                                    <li><a href="@Url.Action("Index","Home")">Inicio</a></li>
+
                                     @* <li><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li> *@
                                     <li><a href="@Url.Action("Services","Home")">Serviços</a></li>
                                     <li><a href="@Url.Action("About","Home")">Nossa Empresa</a></li>
@@ -148,8 +113,8 @@
                                 </div>
 
                                 @* <div class="book-now-btn ml-5 mt-4 mt-lg-0 ml-md-4">
-                                    <a href="#" class="btn akame-btn">Book Now</a>
-                                </div> *@
+                                        <a href="#" class="btn akame-btn">Book Now</a>
+                                    </div> *@
                             </div>
 
                         </div>
@@ -172,26 +137,32 @@
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single-footer-widget mb-80">
 
-                        <a href="#" class="footer-logo"><img id="img-wal" src="~/Content/TemplateAk/img/core-img/logo nova inst equ wal mendes (2).jpg"  class="img-fluid" alt=""></a>
-                        
+                        <a href="#" class="footer-logo"><img id="img-wal" src="~/Content/TemplateAk/img/core-img/logo-wall-sem-fundo.png" class="img-fluid" alt=""></a>
 
-                       
+
+
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget mb-80">
 
-                        <h4 class="widget-title">Opening times</h4>
+                        <h4 class="widget-title">Horários</h4>
 
                         <div class="open-time">
-                            <p>Monday: Friday: 10.00 - 23.00</p>
-                            <p>Saturday: 10.00 - 19.00</p>
+                            <p><strong>Agende sua consulta via WhatsApp</strong></p>
+                            <p>
+                                <a id="link-style" href="https://api.whatsapp.com/send?phone=5512996696767">Enviar mensagem para Consulta</a>
+                            </p>
                         </div>
 
                         <div class="social-info">
                             <a href="https://www.facebook.com/profile.php?id=100090214037502&locale=pt_BR" class="facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            @*<a href="#" class="twitter"><i class="fab fa-"></i></a>*@
+
+                            <a href="https://api.whatsapp.com/send?phone=5512996696767" class="whatsapp">
+                                <img src="~/Content/TemplateAk/img/core-img/whatsapp.png" alt="WhatsApp">
+                            </a>
                             <a href="https://g1.globo.com/sp/vale-do-paraiba-regiao/especial-publicitario/instituto-equilibrio-wal-mendes/noticia/2023/07/19/revitalize-seu-corpo-em-ate-10-anos-com-colageno-liquido-quer-saber-como.ghtml" class="google-plus"><i class="fab fa-google-plus"></i></a>
                             <a href="https://www.instagram.com/harmonizacaoemequilibrio/" class="instagram"><i class="fab fa-instagram"></i></a>
                         </div>
@@ -202,12 +173,12 @@
                 <div class="col-12 col-md-4 col-xl-3">
                     <div class="single-footer-widget mb-80">
 
-                        <h4 class="widget-title">Contact Us</h4>
+                        <h4 class="widget-title">Formas de Contato</h4>
 
                         <div class="contact-address">
-                            <p>Tel: (+12) 345 678 910</p>
-                            <p>E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a123f3636357439353635283633381a3d373b333674393537">[email&#160;protected]</a></p>
-                            <p>Address: Iris Watson, P.O. Box 283 8562 Fusce Rd, NY</p>
+                            <p><strong>WhatsApp:</strong> (12) 99669-6767</p>
+                            <p><strong>E-mail:</strong> <a id="link-style" href="mailto:harmonizacaoemequilibrio@gmail.com" class="__cf_email__" data-cfemail="5a123f3636357439353635283633381a3d373b333674393537">harmonizacaoemequilibrio</a></p>
+                            <p><strong>Endereço:</strong> Rua Maestro Edydio Pinto 165 Edifício São Lucas.  Jardim São Dimas São José dos Campos-SP</p>
                         </div>
                     </div>
                 </div>
@@ -233,16 +204,16 @@
 
 
     @*<script src="~/Content/TemplateD/js/owl.carousel.min.js"></script>
-    <script src="~/Content/TemplateD/js/jquery.slicknav.min.js"></script>
-    <script src="~/Content/TemplateD/js/jquery.nicescroll.min.js"></script>*@
+        <script src="~/Content/TemplateD/js/jquery.slicknav.min.js"></script>
+        <script src="~/Content/TemplateD/js/jquery.nicescroll.min.js"></script>*@
     <script src="~/Scripts/jquery.maskedinput.js"></script>
     <script src="~/Scripts/notifications/pnotify.min.js"></script>
 
     @*meus scripts*@
-<script src="~/Scripts/MyScripts/Global.js"></script>
-<script src="~/Scripts/MyScripts/AdmCliente.js"></script>
-<script src="~/Scripts/MyScripts/AdmConsultaCliente.js"></script>
-<script src="~/Scripts/MyScripts/AdmTratamento.js"></script>
+    <script src="~/Scripts/MyScripts/Global.js"></script>
+    <script src="~/Scripts/MyScripts/AdmCliente.js"></script>
+    <script src="~/Scripts/MyScripts/AdmConsultaCliente.js"></script>
+    <script src="~/Scripts/MyScripts/AdmTratamento.js"></script>
 
     @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
           <script>
