@@ -5589,6 +5589,7 @@
     <Content Include="global_assets\scss\_config.scss" />
     <Content Include="assets\.DS_Store" />
     <Content Include="assets\css\.DS_Store" />
+    <Content Include="Content\traduzido.json" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />

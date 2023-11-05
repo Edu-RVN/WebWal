@@ -3,8 +3,9 @@
     const urlAtual = window.location.pathname;
 
     if (urlAtual === "/Home/Customer") {
-       
+
         obterListaCliente();
+      
     }
 
 
@@ -75,15 +76,17 @@ function atualizarTabelaClientes(Json) {
 
     // Adicione os novos dados à tabela
     tblClientes.rows.add($(conteudoTblClientes)).draw();
+
+  
 }
 
 
 //function atualizarTabelaClientes(Json) {
-   
+
 //    var objClientes = JSON.parse(Json.retorno);
 //    var conteudoTblClientes = '';
 //    var cabecalhoTblClientes = '';
- 
+
 //    $("#headTblClientes").html("");
 //    cabecalhoTblClientes =
 //        '<tr> ' +
@@ -122,9 +125,9 @@ function atualizarTabelaClientes(Json) {
 //    });
 
 
-      
+
 //    tblClientes.fnDestroy();
 //    $("#bodyTblClientes").append(conteudoTblClientes);
-    
+
 
 //}
