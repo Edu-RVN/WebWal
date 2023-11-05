@@ -118,11 +118,11 @@ img {
 }
 /* Down Arrow Icon for Megamenu */
 @font-face {
-  font-family: 'classyfonts';
-  src: url("../../fonts/classy.eot?fftrrv");
-  src: url("../../fonts/classy.eot?fftrrv#iefix") format("embedded-opentype"), url("../../fonts/classy.ttf?fftrrv") format("truetype"), url("../../fonts/classy.woff?fftrrv") format("woff"), url("../../fonts/classy.svg?fftrrv#classyfonts") format("svg");
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'classyfonts';
+    src: url("/Content/TemplateAk/fonts/classy.eot@fftrrv");
+    src: url("/Content/TemplateAk/css/default-assets/classy.eot@fftrrv") format("embedded-opentype"), url("/Content/TemplateAk/css/default-assets/classy.ttf@fftrrv") format("truetype"), url("/Content/TemplateAk/css/default-assets/classy.woff@fftrrv") format("woff"), url("/Content/TemplateAk/css/default-assets/classy.svg@fftrrv") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 .icon-classy-nav-down-arrow {
   font-family: 'classyfonts';

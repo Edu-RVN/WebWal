@@ -8,10 +8,9 @@
 
     <title>Instituto Equilibrio Wal Mendes</title>
 
-    @*TEMPLATE AK*@
     <link rel="icon" href="~/Content/TemplateAk/img/core-img/favicon.ico">
 
-    <link href="~/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/TemplateAk/css/bootstrap.min.css" rel="stylesheet" />
 
     <link href="~/Content/TemplateAk/css/magnific-popup.css" rel="stylesheet" />
 
@@ -21,35 +20,40 @@
 
     <link href="~/Content/TemplateAk/css/default-assets/classy-nav.css" rel="stylesheet" />
 
-    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />*@
+    @*<link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />*@
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link href="~/Content/TemplateAk/css/font-awesome.min.css" rel="stylesheet" />
 
+    <link href="~/Scripts/DataTable/datatables.css" rel="stylesheet" />
+
+
+
+
+
+    @*<link rel="stylesheet" href="style.css">*@
+
     <link href="~/Content/TemplateAk/css/default-assets/style.css" rel="stylesheet" />
+
+    @*<link href="~/Content/TemplateD/css/owl.carousel.min.css" rel="stylesheet" />
+
+        <link href="~/Content/TemplateD/css/slicknav.min.css" rel="stylesheet" />
+        <link href="~/Content/TemplateD/css/style.css" rel="stylesheet" />*@
+
+    <script src="~/Scripts/jquery-3.7.1.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="~/Scripts/DataTable/datatables.min.js"></script>
+
+    <script src="~/Scripts/DataTable/datatables.js"></script>
 
     <link href="~/Content/TemplateAK/css/meuCss/cliente.css" rel="stylesheet" />
 
-    @*TEMPLATE LIMITLESS*@
 
-   
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
-    <link href="~/global_assets/css/icons/icomoon/styles.min.css" rel="stylesheet" type="text/css">
-    @*<link href="~/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">*@
-    @*<link href="~/assets/css/bootstrap_limitless.min.css" rel="stylesheet" type="text/css">*@
-    <link href="~/assets/css/layout.min.css" rel="stylesheet" type="text/css">
-    <link href="~/assets/css/components.min.css" rel="stylesheet" type="text/css">
-    <link href="~/assets/css/colors.min.css" rel="stylesheet" type="text/css">
-    @*/global stylesheets
-        Core JS files*@
-    <script src="~/global_assets/js/main/jquery.min.js"></script>
-    <script src="~/global_assets/js/main/bootstrap.bundle.min.js"></script>
-    <!-- /core JS files -->
-    <!-- Theme JS files -->
-    <script src="~/global_assets/js/plugins/tables/datatables/datatables.min.js"></script>
 
-    <script src="~/assets/js/app.js"></script>
-    <!-- /theme JS files -->
-    <script src="~/Scripts/MyScripts/Global.js"></script>
 
 
 
@@ -62,7 +66,9 @@
 
 
     <header class="header-area">
-              
+
+
+
 
         <div class="main-header-area">
             <div class="classy-nav-container breakpoint-off">
@@ -70,7 +76,7 @@
 
                     <nav class="classy-navbar justify-content-between" id="akameNav">
 
-                        <a class="nav-brand" href="index.html"><img src="~/Content/TemplateAk/img/core-img/logo.png" alt=""></a>
+                        <a class="nav-brand " href="index.html"><img src="~/Content/TemplateAk/img/core-img/logo-letras.png" class="img-fluid" alt="" id="img-logo"></a>
 
                         <div class="classy-navbar-toggler">
                             <span class="navbarToggler"><span></span><span></span><span></span></span>
@@ -85,32 +91,12 @@
                             <div class="classynav">
                                 <ul id="nav">
                                     <li><a href="@Url.Action("Index","Home")">Inicio</a></li>
-                                    <li>
-                                        @*<a href="#">Pages</a>
-                                            <ul class="dropdown">
-                                                <li><a href="@Url.Action("Index","Home")">- Home</a></li>
-                                                <li><a href="@Url.Action("About","Home")">- About Us</a></li>
-                                                <li><a href="./service.html">- Services</a></li>
-                                                <li><a href="./portfolio.html">- Portfolio</a></li>
-                                                <li><a href="./blog.html">- Blog</a></li>
-                                                <li><a href="./single-blog.html">- Blog Details</a></li>
-                                                <li><a href="@Url.Action("Contact","Home")">- Contact</a></li>
-                                                <li>
-                                                    <a href="#">- Dropdown</a>
-                                                    <ul class="dropdown">
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                        <li><a href="#">- Dropdown Item</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>*@
-                                    </li>
+
                                     @* <li><a href="@Url.Action("Portfolio","Home")">Portfolio</a></li> *@
                                     <li><a href="@Url.Action("Services","Home")">Serviços</a></li>
                                     <li><a href="@Url.Action("About","Home")">Nossa Empresa</a></li>
                                     @* <li><a href="@Url.Action("Blog","Home")">Blog</a></li> *@
-                                    <li><a href="@Url.Action("Contact","Home")">Contato</a></li>
+                                    @*<li><a href="@Url.Action("Contact","Home")">Contato</a></li>*@
                                     <li>
                                         <a href="#">Cliente</a>
                                         <ul class="dropdown">
@@ -151,33 +137,36 @@
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single-footer-widget mb-80">
 
-                        <a href="#" class="footer-logo"><img src="~/Content/TemplateAk/img/core-img/logo.png" alt=""></a>
-                        <p class="mb-30">We would love to serve you and let you enjoy your culinary experience. Excepteur sint occaecat cupidatat non proident.</p>
+                        <a href="#" class="footer-logo"><img id="img-wal" src="~/Content/TemplateAk/img/core-img/logo-wall-sem-fundo.png" class="img-fluid" alt=""></a>
 
-                        <div class="copywrite-text">
-                            <p>
-                                Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                            </p>
-                        </div>
+
+
                     </div>
                 </div>
 
                 <div class="col-12 col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget mb-80">
 
-                        <h4 class="widget-title">Opening times</h4>
+                        <h4 class="widget-title">Horários</h4>
 
                         <div class="open-time">
-                            <p>Monday: Friday: 10.00 - 23.00</p>
-                            <p>Saturday: 10.00 - 19.00</p>
+                            <p><strong>Agende sua consulta via WhatsApp</strong></p>
+                           
+                            <p>
+                                <a id="link-style" href="https://api.whatsapp.com/send?phone=5512996696767">
+                                    <i class="fab fa-whatsapp"></i> Enviar mensagem para Consulta
+                                </a>
+                            </p>
+
                         </div>
 
                         <div class="social-info">
-                            <a href="#" class="facebook"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" class="google-plus"><i class="fab fa-google-plus"></i></a>
-                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100090214037502&locale=pt_BR" class="facebook"><i class="fab fa-facebook"></i></a>
+                            @*<a href="#" class="twitter"><i class="fab fa-"></i></a>*@
+
+                           
+                            <a href="https://g1.globo.com/sp/vale-do-paraiba-regiao/especial-publicitario/instituto-equilibrio-wal-mendes/noticia/2023/07/19/revitalize-seu-corpo-em-ate-10-anos-com-colageno-liquido-quer-saber-como.ghtml" class="google-plus"><i class="fab fa-google-plus"></i></a>
+                            <a href="https://www.instagram.com/harmonizacaoemequilibrio/" class="instagram"><i class="fab fa-instagram"></i></a>
                         </div>
 
                     </div>
@@ -186,12 +175,12 @@
                 <div class="col-12 col-md-4 col-xl-3">
                     <div class="single-footer-widget mb-80">
 
-                        <h4 class="widget-title">Contact Us</h4>
+                        <h4 class="widget-title">Entre em Contato</h4>
 
                         <div class="contact-address">
-                            <p>Tel: (+12) 345 678 910</p>
-                            <p>E-mail: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5a123f3636357439353635283633381a3d373b333674393537">[email&#160;protected]</a></p>
-                            <p>Address: Iris Watson, P.O. Box 283 8562 Fusce Rd, NY</p>
+                            <p><strong>WhatsApp:</strong> <a id="link-style" href="https://api.whatsapp.com/send?phone=5512996696767">(12) 99669-6767</p> </a>
+                            <p><strong>E-mail:</strong> <a id="link-style" href="mailto:harmonizacaoemequilibrio@gmail.com" class="__cf_email__" data-cfemail="5a123f3636357439353635283633381a3d373b333674393537">harmonizacaoemequilibrio</a></p>
+                            <p><strong>Endereço:</strong> Rua Maestro Edydio Pinto 165 Edifício São Lucas.  Jardim São Dimas São José dos Campos-SP</p>
                         </div>
                     </div>
                 </div>
@@ -199,31 +188,43 @@
         </div>
     </footer>
 
-       
-    @*<script src="~/Content/TemplateAk/js/jquery.min.js"></script>*@
+
+
+    @*<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>*@
+
+    <script src="~/Content/TemplateAk/js/jquery.min.js"></script>
+
 
     <script src="~/Content/TemplateAk/js/popper.min.js"></script>
 
-    @*<script src="~/Content/TemplateAk/js/bootstrap.min.js"></script>*@
+
+    <script src="~/Content/TemplateAk/js/bootstrap.min.js"></script>
 
     <script src="~/Content/TemplateAk/js/akame.bundle.js"></script>
 
     <script src="~/Content/TemplateAk/js/default-assets/active.js"></script>
 
-   
-    <!-- Theme JS files -->
-   
-    @*<script type="text/javascript" src="~/assets/js/plugins/forms/selects/select2.min.js"></script>*@
+
+    @*<script src="~/Content/TemplateD/js/owl.carousel.min.js"></script>
+        <script src="~/Content/TemplateD/js/jquery.slicknav.min.js"></script>
+        <script src="~/Content/TemplateD/js/jquery.nicescroll.min.js"></script>*@
     <script src="~/Scripts/jquery.maskedinput.js"></script>
-    @*<script src="~/Scripts/notifications/pnotify.min.js"></script>*@
+    <script src="~/Scripts/notifications/pnotify.min.js"></script>
 
-
-    <!-- /theme JS files -->
     @*meus scripts*@
-    
+    <script src="~/Scripts/MyScripts/Global.js"></script>
     <script src="~/Scripts/MyScripts/AdmCliente.js"></script>
     <script src="~/Scripts/MyScripts/AdmConsultaCliente.js"></script>
     <script src="~/Scripts/MyScripts/AdmTratamento.js"></script>
 
-   </body>
+    @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+          <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+          </script>
+          <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816" integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw==" data-cf-beacon='{"rayId":"7e43f1f1f8601aa6","version":"2023.4.0","b":1,"token":"cd0b4b3a733644fc843ef0b185f98241","si":100}' crossorigin="anonymous"></script>*@
+</body>
 </html>
