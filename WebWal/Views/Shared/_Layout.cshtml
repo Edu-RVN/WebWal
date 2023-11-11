@@ -100,9 +100,9 @@
                                     <li>
                                         <a href="#">Cliente</a>
                                         <ul class="dropdown">
-                                            <li><a href="@Url.Action("CustomerNew","Home")">- Novo Ciente</a></li>
-                                            <li><a href="@Url.Action("Customer","Home")">- Consultar</a></li>
-                                            <li><a href="@Url.Action("CustomerAppointment","Home")">- Tratamento</a></li>
+                                            @*<li><a href="@Url.Action("CustomerNew","Home")">- Novo Ciente</a></li>*@
+                                            <li><a href="@Url.Action("LoginLim","Home")">Admin</a></li>
+                                            @*<li><a href="@Url.Action("CustomerAppointment","Home")">- Tratamento</a></li>*@
 
                                         </ul>
                                     </li>
@@ -178,7 +178,7 @@
                         <h4 class="widget-title">Entre em Contato</h4>
 
                         <div class="contact-address">
-                            <p><strong>WhatsApp:</strong> <a id="link-style" href="https://api.whatsapp.com/send?phone=5512996696767">(12) 99669-6767</p> </a>
+                            <p><strong>WhatsApp:</strong> <a href="https://api.whatsapp.com/send?phone=5512996696767" id="link-style">(12) 99669-6767</a></p> 
                             <p><strong>E-mail:</strong> <a id="link-style" href="mailto:harmonizacaoemequilibrio@gmail.com" class="__cf_email__" data-cfemail="5a123f3636357439353635283633381a3d373b333674393537">harmonizacaoemequilibrio</a></p>
                             <p><strong>Endereço:</strong> Rua Maestro Edydio Pinto 165 Edifício São Lucas.  Jardim São Dimas São José dos Campos-SP</p>
                         </div>
@@ -208,14 +208,10 @@
     @*<script src="~/Content/TemplateD/js/owl.carousel.min.js"></script>
         <script src="~/Content/TemplateD/js/jquery.slicknav.min.js"></script>
         <script src="~/Content/TemplateD/js/jquery.nicescroll.min.js"></script>*@
-    <script src="~/Scripts/jquery.maskedinput.js"></script>
-    <script src="~/Scripts/notifications/pnotify.min.js"></script>
+   
+    @*<script src="~/Scripts/notifications/pnotify.min.js"></script>*@
 
-    @*meus scripts*@
-    <script src="~/Scripts/MyScripts/Global.js"></script>
-    <script src="~/Scripts/MyScripts/AdmCliente.js"></script>
-    <script src="~/Scripts/MyScripts/AdmConsultaCliente.js"></script>
-    <script src="~/Scripts/MyScripts/AdmTratamento.js"></script>
+   
 
     @*<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
           <script>

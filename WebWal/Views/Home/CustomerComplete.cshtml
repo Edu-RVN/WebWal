@@ -1,0 +1,266 @@
+﻿
+@{
+    ViewBag.Title = "CustomerComplete";
+    Layout = "~/Views/Shared/_LayoutSistemaLim.cshtml";
+}
+
+@{
+    ViewBag.Title = "Customer";
+    Layout = "~/Views/Shared/_LayoutSistemaLim.cshtml";
+}
+
+@model List<WebWal.Models.ClienteCompleto>
+
+<!-- Page header -->
+<div class="page-header border-bottom-0">
+    <div class="page-header-content header-elements-md-inline">
+        <div class="page-title d-flex">
+            <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Cliente</span> - Instituto Equilibrio Wal Mendes</h4>
+            <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+        </div>
+
+    </div>
+</div>
+<!-- /page header -->
+<!-- Content area -->
+
+
+
+
+@foreach (var cliente in Model)
+{
+    if (cliente.Id == ViewBag.ultimo.Id)
+    {
+
+
+        <div class="content pt-0">
+
+            <!-- Inner container -->
+            <div class="d-md-flex align-items-md-start">
+
+                <!-- Left sidebar component -->
+                <div class="sidebar sidebar-light bg-transparent sidebar-component sidebar-component-left wmin-300 border-0 shadow-0 sidebar-expand-md">
+
+                    <!-- Sidebar content -->
+                    <div class="sidebar-content">
+
+                        <!-- Navigation -->
+                        <div class="card">
+                            <div class="card-body bg-indigo-400 text-center card-img-top" style="background-image: url(~/Content/TemplateLim23-dark/global_assets/images/backgrounds/panel_bg.png); background-size: contain;">
+                                <div class="card-img-actions d-inline-block mb-3">
+                                    <img class="img-fluid rounded-circle" src="@Url.Action("ShowImage", new { id = cliente.Id.ToString() })" @*src="~/Content/TemplateLim23-dark/global_assets/images/placeholders/placeholder.jpg"*@ width="170" height="170" alt="">
+                                    <div class="card-img-actions-overlay rounded-circle">
+                                        <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round">
+                                            <i class="icon-plus3"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-outline bg-white text-white border-white border-2 btn-icon rounded-round ml-2">
+                                            <i class="icon-link"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <h6 class="font-weight-semibold mb-0">Cliente desde - @cliente.DataCadastro.ToShortDateString()</h6>
+                                @*<span class="d-block opacity-75">Head of UX</span>*@
+
+                                @*<div class="list-icons list-icons-extended mt-3">
+                                        <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="" data-container="body" data-original-title="Google Drive"><i class="icon-google-drive"></i></a>
+                                        <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="" data-container="body" data-original-title="Twitter"><i class="icon-twitter"></i></a>
+                                        <a href="#" class="list-icons-item text-white" data-popup="tooltip" title="" data-container="body" data-original-title="Github"><i class="icon-github"></i></a>
+                                    </div>*@
+                            </div>
+
+                            <div class="card-body p-0">
+                                <ul class="nav nav-sidebar mb-2">
+                                    <li class="nav-item-header">Histórico</li>
+                                    <li class="nav-item">
+                                        <a href="#profile" class="nav-link active" data-toggle="tab">
+                                            <i class="icon-user"></i>
+                                            Ver Tratamentos
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /navigation -->
+
+                    </div>
+                    <!-- /sidebar content -->
+
+                </div>
+                <!-- /left sidebar component -->
+                <!-- Right content -->
+                <div class="tab-content w-100">
+                    <div class="tab-pane fade active show" id="profile">
+                        <!-- Profile info -->
+                        <div class="card">
+                            <div class="card-header header-elements-inline">
+                                <h5 class="card-title">Informações</h5>
+                                <div class="header-elements">
+                                    <div class="list-icons">
+                                        <a class="list-icons-item" data-action="collapse"></a>
+                                        <a class="list-icons-item" data-action="reload"></a>
+                                        <a class="list-icons-item" data-action="remove"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card-body">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Nome</label>
+                                                <input disabled="disabled" type="text" id="txtNome" name="Nome" class="form-control" value="@cliente.Nome">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>RG</label>
+                                                <input disabled="disabled" type="text" id="txtRg" name="Rg" class="form-control" value="@cliente.Rg">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>CPF</label>
+                                                <input disabled="disabled" type="text" id="txtCpf" name="Cpf" class="form-control" value="@cliente.Cpf">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Nascimento</label>
+                                                <input disabled="disabled" type="text" id="nascimento" class="form-control" value="@cliente.DataNascimento.ToShortDateString()">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Idade</label>
+                                                <input type="text" id="idade" name="txtIdade" disabled="disabled" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>CEP</label>
+                                                <input disabled="disabled" type="text" id="txtCep" name="Cep" class="form-control" value="@cliente.Cep">
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <label>Cidade</label>
+                                                <input disabled="disabled" type="text" id="txtCidade" name="Cidade" class="form-control" value="@cliente.Cidade">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <label>Endereço</label>
+                                                <input disabled="disabled" type="text" id="txtEndereco" name="Endereco" class="form-control" value="@cliente.Endereco">
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                                <input disabled="disabled" type="email" id="txtEmail" name="Email" class="form-control" value="@cliente.Email">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label>Celular</label>
+                                                <input disabled="disabled" type="text" id="txtCel" name="Celular" class="form-control" value="@cliente.Celular">
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label for="txtNome">Motivo da Visita</label>
+                                                <textarea disabled="disabled" id="txtMotivo" name="Motivo" class="form-control" rows="4">@cliente.MotivoVisita</textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="form-group">
+                                        <div class="row">
+
+                                            <div class="col-md-12">
+                                                <label>Foto Cliente</label>
+                                                <input type="file" name="file" class="form-input-styled" data-fouc>-->
+                                    @*<span class="form-text text-muted">Accepted formats: gif, png, jpg. Max file size 2Mb</span>*@
+                                    <!--</div>
+                                        </div>
+                                    </div>-->
+                                    @*<div class="text-right">
+                                            <input id="btnCadCliente" type="button" class="btn btn-success" value="Cadastar">
+                                            <button type="submit" class="btn bg-success-400 ml-3">Submit <i class="icon-paperplane ml-2"></i></button>
+
+                                        </div>*@
+                                </form>
+                            </div>
+
+                        </div>
+                        <!-- /profile info -->
+                    </div>
+
+                </div>
+                <!-- /right content -->
+
+            </div>
+            <!-- /inner container -->
+
+        </div>
+    }
+}
+
+<script>
+
+    let dataNascimento = new Date($("#nascimento").val());
+
+    let dataAtual = new Date();
+
+    let diferencaEmMilissegundos = dataAtual - dataNascimento;
+
+    let idadeEmAnos = Math.floor(diferencaEmMilissegundos / (365.25 * 24 * 60 * 60 * 1000));
+
+    $("#idade").val(idadeEmAnos);
+
+</script>
+
+<!-- ASSINATURA MANUAL NO DOCUMENTO -->
+@*<div>
+        <canvas id="signature-pad" class="signature-pad" width="400" height="200"></canvas>
+        <button id="clear-button">Limpar</button>
+        <button id="save-button">Salvar</button>
+    </div>
+
+
+
+    <script src="~/Scripts/signature_pad.js"></script>
+    <script>
+        var canvas = document.getElementById('signature-pad');
+        var signaturePad = new SignaturePad(canvas, {
+            backgroundColor: 'rgb(255, 255, 255)',
+            penColor: 'rgb(0, 0, 0)'
+        });
+
+        var clearButton = document.getElementById('clear-button');
+        var saveButton = document.getElementById('save-button');
+
+        clearButton.addEventListener('click', function () {
+            signaturePad.clear();
+        });
+
+        saveButton.addEventListener('click', function () {
+            debugger
+            var dataURL = signaturePad.toDataURL();
+            // Envie dataURL para o servidor ou faça algo com a assinatura
+            alert('Assinatura salva com sucesso: ' + dataURL);
+        });
+    </script>*@
+

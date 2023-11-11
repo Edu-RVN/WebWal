@@ -227,6 +227,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\ClienteCompleto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -3203,8 +3204,11 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\MyScripts\AdmCliente.js" />
     <Content Include="Scripts\MyScripts\AdmConsultaCliente.js" />
+    <Content Include="Scripts\MyScripts\AdmLogin.js" />
     <Content Include="Scripts\MyScripts\AdmTratamento.js" />
     <Content Include="Scripts\MyScripts\Global.js" />
+    <Content Include="Scripts\signature_pad.js" />
+    <Content Include="Scripts\signature_pad.min.js" />
     <Content Include="style.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -3227,6 +3231,9 @@
     <Content Include="Views\Home\CustomerNew.cshtml" />
     <Content Include="Views\Home\CustomerAppointment.cshtml" />
     <Content Include="Views\Shared\_LayoutLim23.cshtml" />
+    <Content Include="Views\Home\LoginLim.cshtml" />
+    <Content Include="Views\Shared\_LayoutSistemaLim.cshtml" />
+    <Content Include="Views\Home\CustomerComplete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

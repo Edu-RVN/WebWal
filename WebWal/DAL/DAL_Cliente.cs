@@ -39,7 +39,7 @@ namespace WebWal.DAL
                 string conexaoMongoDB = ConfigurationManager.ConnectionStrings["conexaoMongo"].ConnectionString;
                 var client = new MongoClient(conexaoMongoDB);
                 var db = client.GetDatabase("BANCOWEBWAL");
-                IMongoCollection<Cliente> colecao = db.GetCollection<Cliente>("cliente");
+                IMongoCollection<Cliente> colecao = db.GetCollection<Cliente>("clienteCompleto");
                 var filtro = Builders<Cliente>.Filter.Where(x => x.Flag == "1");
                 var result = colecao.Find<Cliente>(filtro).ToList<Cliente>();
 

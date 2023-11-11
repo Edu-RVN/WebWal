@@ -1,7 +1,821 @@
 ﻿@{
     ViewBag.Title = "CustomerAppointment";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutSistemaLim.cshtml";
 }
+
+<!-- Page header -->
+<div class="page-header border-bottom-0">
+    <div class="page-header-content header-elements-md-inline">
+        <div class="page-title d-flex">
+            <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Tratamentos </span> - Instituto Equilibrio Wal Mendes </h4>
+            <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+        </div>
+
+    </div>
+</div>
+<!-- /page header -->
+<!-- Content area -->
+
+
+
+
+<div class="content pt-0">
+
+
+
+    <!-- Solid bordered tabs -->
+    <div class="row">
+
+
+        <div class="col-md-12">
+            <!-- Input group buttons -->
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h6 class="card-title">Informações sobre os Tratamentos</h6>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                            <a class="list-icons-item" data-action="reload"></a>
+                            <a class="list-icons-item" data-action="remove"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+
+                    <form>
+
+
+                        <div class="form-group">
+
+                            <div class="form-group">
+                                <label class="d-block">Fixed width select</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control border-right-0" placeholder="Teal button">
+                                    <span class="input-group-append">
+                                        <button class="btn bg-teal" type="button" id="btnGetCliente">Buscar Cliente</button>
+                                    </span>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <!-- /input group buttons -->
+
+        </div>
+
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h6 class="card-title">Formularios</h6>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                            <a class="list-icons-item" data-action="reload"></a>
+                            <a class="list-icons-item" data-action="remove"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <ul class="nav nav-tabs nav-tabs-solid nav-justified">
+                        <li class="nav-item"><a href="#solid-bordered-justified-tab1" class="nav-link active" data-toggle="tab">Anamnese</a></li>
+                        <li class="nav-item"><a href="#solid-bordered-justified-tab2" class="nav-link" data-toggle="tab">Responsabilidade</a></li>
+                        <li class="nav-item"><a href="#solid-bordered-justified-tab3" class="nav-link" data-toggle="tab">Consentimento</a></li>
+                        <li class="nav-item"><a href="#solid-bordered-justified-tab4" class="nav-link" data-toggle="tab">Tratamento</a></li>
+                        <li class="nav-item"><a href="#solid-bordered-justified-tab5" class="nav-link" data-toggle="tab">Aplicação</a></li>
+                        <li class="nav-item"><a href="#solid-bordered-justified-tab6" class="nav-link" data-toggle="tab">Pagamento</a></li>
+                        @*<li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a href="#solid-bordered-justified-tab3" class="dropdown-item" data-toggle="tab">Dropdown tab</a>
+                                    <a href="#solid-bordered-justified-tab4" class="dropdown-item" data-toggle="tab">Another tab</a>
+                                </div>
+                            </li>*@
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="solid-bordered-justified-tab1">
+                            <!-- Checkboxes -->
+                            <div class="card">
+
+                                <div class="card-body">
+                                    <p class="mb-3">ANAMNESE</p>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+
+
+                                            <div class="form-group pt-2">
+                                                <label class="font-weight-semibold"></label>
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Tratamento Médico Atual?
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Antecedentes Alérgicos?
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Portador de Marcapasso?
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Alterações Cardíacas:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Hipo/Hipertensão Arterial:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Distúrbio Circulatório:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Distúrbio Renal:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Distúrbio Hormonal:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Distúrbio Gastro Intestinal:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Epilepsia/Convulsões:
+                                                    </label>
+                                                </div>
+
+
+
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-md-4">
+
+
+                                            <div class="form-group pt-2">
+                                                <label class="font-weight-semibold"></label>
+
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Alterações Psicológicas/Psiquiátricas:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Antecedentes Oncológicos:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Diabetes:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Algum Tipo de Doença:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Implante Dentário:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Tratamentos Dermatológicos:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Cirurgia Plástica Estética:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Cirurgias Em Geral:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Tabagismo:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Ingere Bebida Alcoólica:
+                                                    </label>
+                                                </div>
+
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="col-md-4">
+
+
+                                            <div class="form-group pt-2">
+                                                <label class="font-weight-semibold"></label>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Funcionamento Intestinal Bom:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Qualidade Do Sono é Bom:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Bebe Mais Que 2L de Água Ao Dia:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Pratica Atividade Física:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Usa Anticoncepcional:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        É Gestante:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Usa Lentes De Contato:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Utiliza Cosmédicos ou Semelhantes:
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-switchery mb-3">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-switchery" checked data-fouc>
+                                                        Tomou Algum Tipo De Vacina Nos Ultimos 30 Dias?
+                                                    </label>
+                                                </div>
+
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /checkboxes -->
+
+                        </div>
+
+                        <div class="tab-pane fade" id="solid-bordered-justified-tab2">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>
+                                        Eu <strong>(NOME)</strong> declaro ter sido informado(a) claramente e ciente sobre
+                                        todos
+                                        os benefícios,
+                                        os riscos, as indicações, contra-indicações, principais efeitos colaterais e
+                                        advertências gerais, relacionados ao tratamento estético. Comprometo-me a seguir
+                                        todas
+                                        as orientações e a fazer uso de todos os produtos contidos em minha prescrição
+                                        domiciliar. As declarações acima são verdadeiras, não cabendo ao profissional a
+                                        Responsaabilidade por informações omitidas.
+                                    </p>
+
+
+                                    <!-- ASSINATURA MANUAL NO DOCUMENTO -->
+                                    <div>
+                                        <canvas id="signature-pad" class="signature-pad" width="400" height="100"></canvas>
+
+                                    </div>
+
+                                    <div class="text-right">
+
+                                        <button class="btn bg-primary" type="button" id="clear-button">Limpar</button>
+                                        <button class="btn bg-teal" type="button" id="save-button">Salvar</button>
+                                        @*<button type="submit" class="btn btn-primary">Submit <i class="icon-paperplane ml-2"></i></button>*@
+                                    </div>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="solid-bordered-justified-tab3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>
+
+                                        Pelo presente termo, eu autorizo a realização dos procedimentos contratados conforme
+                                        consta em contrato pela profissional <strong>(NOME)</strong> devidamente
+                                        habilidada(o).
+                                    </p>
+
+                                    <p>
+                                        Os procedimentos de aplicação via injeta=ável foi totalmente explicado e eu entendi
+                                        a
+                                        natureza e consequências do procedimento.
+                                    </p>
+
+                                    <p>
+                                        Alguns efeitos adversos ou secundários podem ocorrer após a aplicação, com pequenas
+                                        marcas transitórias nos locais ou pontos de aplicação, enrijecimento de pele,
+                                        hematomas,
+                                        inflamação ou reações indesejadas. Esses eventos geralmente são transitórios e
+                                        reversíveis.
+                                    </p>
+
+                                    <p>
+                                        Estou ciente que todos os pacientes que estão em tratamento com antibióticos do tipo
+                                        espectinomicida ou aminoglicosídeos, que possuem enfermidades neuromusculares
+                                        graves,
+                                        grávidas, mulheres em período de lactação, com infecções ou sinais de inflamação nos
+                                        locais de aplicação não podem ser submetidos a aplicação, e informo que não me
+                                        enquadro
+                                        nessas limitações.
+                                    </p>
+
+                                    <p>
+                                        Estou ciente que a duração do resultado pode variar de acordo com cada paciente, uma
+                                        vez
+                                        que cada organismo reage de maneira diferente, podendo variar de 2 a 8 meses e em
+                                        casos
+                                        isolados até 1 ano e meio, e que os efeitos iniciais são observados a partir de 72
+                                        horas, tendo seu efeito total em 30 dias. Estou ciente que a prática estética não é
+                                        uma
+                                        ciência exata e reconheço que apesar de ter sido informada, entendo que as
+                                        possibilidades absolutas e relativas de que se atingir os objetivos não são
+                                        garantidos.
+                                        Estou ciente que não existe resultado definitivo e garantido. Fui claramente
+                                        informada(o) das seguintes contradições, potenciais efeitos adversos e riscos: Os
+                                        sintomas adversos mais comuns são: rejeição, necrose ou nódulos regionais, tontura,
+                                        fraqueza, cansaço, mal-estar, náuseas, boca seca, sensibilidade à luz, reações
+                                        alérgicas
+                                        na pele.
+                                    </p>
+
+                                    <p>
+                                        Autorizo o registro de foto do procedimento por compreender que além de ser uma
+                                        prática
+                                        legal, representa uma alternativa importante de esclarecimento das informações
+                                        prestadas
+                                        à
+                                        conduta proposta.
+                                    </p>
+
+                                    <p>
+                                        Autorizo que as mesmas sejam exibidas em palestras, congressos e eventos
+                                        científicos,
+                                        redes sociais desde que a minha identidade seja preservada.
+                                    </p>
+
+                                    <p>
+                                        declaro ter recebido por escrito todas as orientações pré e pós procedimento.
+                                    </p>
+
+                                    <p>
+                                        Declaro que nada omiti em relação a minha saúde e que esta declaração passe a fazer
+                                        parte da minha ficha clínica, o profissional da saúde está autorizado a utilizar em
+                                        qualquer época no amparo e na defesa de seus direitos. Tive a oportunidade de
+                                        esclarecer
+                                        minhas dúvidas relativas ao procedimento a qual irei me submeter, tendo lido e
+                                        compreendido as informações deste documento. Assumo ter lido este termo de
+                                        consentimento
+                                        e entendo totalmente seu conteúdo. Autorizo ao profissional da saúde a realizar o
+                                        procedimento em mim.
+                                    </p>
+
+                                    <p>
+                                        Tenho ciência também que por ser tratar de procedimentos estéticos, estes dependes
+                                        de
+                                        vários outros fatores ligados ao meu estilo de vida, organismo e genética, não tendo
+                                        nenhuma responsabilidade por insatisfação de minha parte o profissional responsável
+                                        pelos procedimentos.
+                                    </p>
+
+                                    <p>Data: </p>
+
+
+                                    <!-- ASSINATURA MANUAL NO DOCUMENTO -->
+                                    <div>
+                                        <canvas id="signature-pad2" class="signature-pad" width="400" height="100"></canvas>
+
+                                    </div>
+
+                                    <div class="text-right">
+
+                                        <button class="btn bg-primary" type="button" id="clear-button2">Limpar</button>
+                                        <button class="btn bg-teal" type="button" id="save-button2">Salvar</button>
+                                        @*<button type="submit" class="btn btn-primary">Submit <i class="icon-paperplane ml-2"></i></button>*@
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="solid-bordered-justified-tab4">
+                            <div class="card">
+
+
+
+
+                                <div class="card-body">
+
+
+                                    <div class="form-group">
+                                        <label>Multiple select</label>
+                                        <select multiple="" class="form-control select select2-hidden-accessible" data-fouc="" data-select2-id="25" tabindex="-1" aria-hidden="true">
+                                            <option value="AZ" selected>Botox</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="WY">Wyoming</option>
+
+                                            <option value="AL">Alabama</option>
+                                            <option value="IA" selected>Iowa</option>
+                                            <option value="KS" selected>Kansas</option>
+                                            <option value="KY">Kentucky</option>
+                                        </select>
+                                    </div>
+
+
+
+
+
+                                    @*<div class="form-group">
+                                        <label>Escolha o Tratamento:</label>
+                                        <select multiple="multiple" class="form-control select" data-fouc>
+
+                                            <option value="AZ" selected>Botox</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="WY">Wyoming</option>
+
+                                            <option value="AL">Alabama</option>
+                                            <option value="IA" selected>Iowa</option>
+                                            <option value="KS" selected>Kansas</option>
+                                            <option value="KY">Kentucky</option>
+
+                                        </select>
+                                    </div>*@
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="solid-bordered-justified-tab5">
+
+                            <!-- Checkboxes -->
+                            <div class="card">
+                                <div class="card-header header-elements-inline">
+                                    <h6 class="card-title">Pontos de Aplicação</h6>
+
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group pt-2">
+
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                        Checked styled
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                        Checked styled
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                        Checked styled
+                                                    </label>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group pt-2">
+
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                        Checked styled
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                        Checked styled
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                        Checked styled
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            @*<div class="form-group mb-3 mb-md-2">
+
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                            Checked styled
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                            Checked styled
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <label class="form-check-label">
+                                                            <input type="checkbox" class="form-check-input-styled" checked data-fouc>
+                                                            Checked styled
+                                                        </label>
+                                                    </div>
+                                                </div>*@
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /checkboxes -->
+
+
+                        </div>
+
+                        <div class="tab-pane fade" id="solid-bordered-justified-tab6">
+                            <!-- Checkboxes -->
+                            <div class="card">
+                                <div class="card-header header-elements-inline">
+                                    <h6 class="card-title">Valor Total</h6>
+                                    <div class="header-elements">
+                                        <div class="list-icons">
+                                            <a class="list-icons-item" data-action="collapse"></a>
+                                            @*<a class="list-icons-item" data-action="reload"></a>
+                                                <a class="list-icons-item" data-action="remove"></a>*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="form-group mb-3 mb-md-2">
+
+
+                                                <div class="input-group">
+                                                    <input id="txtValor" type="text" class="form-control border-right-0" placeholder="Valor total do tratamento.." >
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /checkboxes -->
+                            <!-- Checkboxes -->
+                            <div class="card">
+                                <div class="card-header header-elements-inline">
+                                    <h6 class="card-title">Forma de Pagamento</h6>
+                                    <div class="header-elements">
+                                        <div class="list-icons">
+                                            <a class="list-icons-item" data-action="collapse"></a>
+                                            @*<a class="list-icons-item" data-action="reload"></a>
+                                                <a class="list-icons-item" data-action="remove"></a>*@
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card-body">
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+
+
+                                            <div class="form-group mb-3 mb-md-2">
+                                                @*<label class="d-block font-weight-semibold">Left inline styled</label>*@
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input id="checkPix" type="checkbox" class="form-check-input-styled" data-fouc>
+                                                        PIX
+                                                    </label>
+                                                </div>
+
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input id="checkDinheiro" type="checkbox" class="form-check-input-styled" data-fouc>
+                                                        Dinheiro
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input id="checkCartao"  type="checkbox" class="form-check-input-styled" data-fouc>
+                                                        Cartão
+                                                    </label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <label class="form-check-label">
+                                                        <input  id="checkO" type="checkbox" class="form-check-input-styled" data-fouc>
+                                                        Outros
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                          
+                                           
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="form-group" id="drwParcelas" style="display:none">
+                                                <label>Parcelas</label>
+                                                <select class="form-control select select2-hidden-accessible" data-fouc="" data-select2-id="1" tabindex="-1" aria-hidden="true">
+                                                    <option value="1">A vista</option>
+                                                    <option value="2">02 Parcelas </option>
+                                                    <option value="3">03 Parcelas</option>
+                                                    <option value="4">04 Parcelas</option>
+                                                </select> 
+                                            </div>
+
+                                            <div class="mb-3" id="valoresPersonalizados" style="display:none">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <label for="formFile" class="form-label">Data</label>
+                                                        <input type="date" id="txtNome" class="form-control mb-30" placeholder="Nome">
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <label for="formFile" class="form-label">Valor</label>
+                                                        <div class="input-group mb-15 ">
+                                                            <input type="text" class="form-control" aria-label="Recipient's username"
+                                                                   aria-describedby="button-addon2">
+                                                            <button class="btn btn-outline-secondary" type="button" id="btnGetCliente">+</button>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="text-right">
+
+                                                <button class="btn bg-primary" type="button" id="clear-button2">Cancelar</button>
+                                                <button class="btn bg-teal" type="button" id="save-button2">Salvar</button>
+                                                @*<button type="submit" class="btn btn-primary">Submit <i class="icon-paperplane ml-2"></i></button>*@
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /checkboxes -->
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /solid bordered tabs -->
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div id="main-tratamento">
@@ -352,7 +1166,7 @@
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    
+
                                     <p>
                                         <input type="checkbox" class="custom-checkbox" name="termo1" value="huey">
                                         Pelo presente termo, eu autorizo a realização dos procedimentos contratados conforme
@@ -532,7 +1346,7 @@
 
                                         </div>
 
-                                       
+
                                         <div class="mb-3" id="valoresPersonalizados" style="display:none">
                                             <div class="row">
                                                 <div class="col-lg-6">
@@ -552,7 +1366,7 @@
                                         </div>
                                     </div>
                                 </div>
-                              
+
                             </div>
                         </div>
                     </div>
@@ -564,3 +1378,51 @@
         </form>
     </div>
 </div>
+
+
+<script src="~/Scripts/signature_pad.js"></script>
+<script>
+    var canvas = document.getElementById('signature-pad');
+    var signaturePad = new SignaturePad(canvas, {
+        backgroundColor: 'rgb(255, 255, 255)',
+        penColor: 'rgb(0, 0, 0)'
+    });
+
+    var clearButton = document.getElementById('clear-button');
+    var saveButton = document.getElementById('save-button');
+
+    clearButton.addEventListener('click', function () {
+        signaturePad.clear();
+    });
+
+    saveButton.addEventListener('click', function () {
+        debugger
+        var dataURL = signaturePad.toDataURL();
+        // Envie dataURL para o servidor ou faça algo com a assinatura
+        alert('Assinatura salva com sucesso: ' + dataURL);
+    });
+
+
+    var canvas2 = document.getElementById('signature-pad2');
+    var signaturePad2 = new SignaturePad(canvas2, {
+        backgroundColor: 'rgb(255, 255, 255)',
+        penColor: 'rgb(0, 0, 0)'
+    });
+
+    var clearButton = document.getElementById('clear-button2');
+    var saveButton = document.getElementById('save-button2');
+
+    clearButton.addEventListener('click', function () {
+        signaturePad2.clear();
+    });
+
+    saveButton.addEventListener('click', function () {
+        debugger
+        var dataURL2 = signaturePad2.toDataURL();
+        // Envie dataURL para o servidor ou faça algo com a assinatura
+        alert('Assinatura salva com sucesso: ' + dataURL2);
+    });
+
+
+
+</script>
