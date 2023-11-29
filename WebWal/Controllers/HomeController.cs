@@ -28,40 +28,64 @@ namespace WebWal.Controllers
             return View();
         }
 
+        [HttpPost]
+        public JsonResult Login(User user)
+        {
+            if (user.Nome == "Wal" && user.Senha == "admin")
+            {
+                Session["USUARIO"] = user;
+
+                return Json(new
+                {
+                    retorno = user.Nome
+                });
+            }
+            else
+            {
+                return Json(new
+                {
+                    retorno = "Erro"
+                });
+            }
+
+        }
+
         public ActionResult About()
         {
-            
+
             return View();
         }
 
         public ActionResult Contact()
         {
             return View();
-        } 
+        }
         public ActionResult Portfolio()
         {
             return View();
         }
         public ActionResult Blog()
         {
-            
+
             return View();
         }
         public ActionResult Services()
-        {           
+        {
 
             return View();
         }
         public ActionResult Customer()
         {
-
+            var user = (User)Session["USUARIO"];
+            ViewBag.Usuario = user;
             return View();
         }
         public ActionResult CustomerNew()
         {
-           
+            var user = (User)Session["USUARIO"];
+            ViewBag.Usuario = user;
             return View();
-            
+
         }
 
         public ActionResult CustomerComplete()
@@ -75,7 +99,8 @@ namespace WebWal.Controllers
         }
         public ActionResult CustomerAppointment()
         {
-
+            var user = (User)Session["USUARIO"];
+            ViewBag.Usuario = user;
             return View();
         }
         public ActionResult LoginLim()
@@ -90,9 +115,9 @@ namespace WebWal.Controllers
 
         public ActionResult CadastrarCliente(Cliente dados)
         {
-           
+
             var ret = bllCad.CadastrarCliente(dados);
-                       
+
             return Json(new
             {
                 retorno = ret
@@ -103,9 +128,9 @@ namespace WebWal.Controllers
         [HttpPost]
         public ActionResult ObterListaCliente()
         {
-           
+
             var ret = bllCad.ObterListaCliente();
-                       
+
             return Json(new
             {
                 retorno = ret
@@ -142,7 +167,7 @@ namespace WebWal.Controllers
                     Email = Email,
                     Celular = Celular,
                     Cpf = Cpf,
-                    Rg =Rg,
+                    Rg = Rg,
                     Flag = "1",
                     MotivoVisita = Motivo,
                     Data = new MongoDB.Bson.BsonBinaryData(imageBytes)

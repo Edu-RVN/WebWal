@@ -32,15 +32,15 @@ var InputsCheckboxesRadios = function () {
         // Contextual colors
         //
 
-        // Primary
-        $('.form-check-input-styled-primary').uniform({
-            wrapperClass: 'border-primary text-primary'
-        });
+        //// Primary
+        //$('.form-check-input-styled-primary').uniform({
+        //    wrapperClass: 'border-primary text-primary'
+        //});
 
-        // Danger
-        $('.form-check-input-styled-danger').uniform({
-            wrapperClass: 'border-danger text-danger'
-        });
+        //// Danger
+        //$('.form-check-input-styled-danger').uniform({
+        //    wrapperClass: 'border-danger text-danger'
+        //});
 
         // Success
         $('.form-check-input-styled-success').uniform({

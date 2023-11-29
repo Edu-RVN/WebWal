@@ -11,6 +11,18 @@
         getCustomer();
         calcularIdade();
         validarEmail();
+
+        $('.navbar-nav-link.sidebar-control').click();
+
+        $('#AdminClienteMenu').addClass('nav-item-open');
+        $("#novoClienteMenu").css("background-color", "#5c6c92")
+
+        // Initializa componente file input personalizado
+        $('.clienteNovo').uniform({
+            fileButtonClass: 'action btn bg-warning',
+            fileDefaultHtml: 'Nenhum arquivo selecionado',
+            fileButtonHtml: 'Selecione'
+        });
     } 
 
 

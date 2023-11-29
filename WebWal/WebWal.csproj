@@ -221,13 +221,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BLL\BLL_Cliente.cs" />
+    <Compile Include="BLL\BLL_ItemNovo.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SistemaController.cs" />
     <Compile Include="DAL\DAL_Cliente.cs" />
+    <Compile Include="DAL\DAL_NovoItem.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\ClienteCompleto.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -3207,6 +3211,7 @@
     <Content Include="Scripts\MyScripts\AdmLogin.js" />
     <Content Include="Scripts\MyScripts\AdmTratamento.js" />
     <Content Include="Scripts\MyScripts\Global.js" />
+    <Content Include="Scripts\MyScripts\NovosItens.js" />
     <Content Include="Scripts\signature_pad.js" />
     <Content Include="Scripts\signature_pad.min.js" />
     <Content Include="style.css" />
@@ -3234,6 +3239,7 @@
     <Content Include="Views\Home\LoginLim.cshtml" />
     <Content Include="Views\Shared\_LayoutSistemaLim.cshtml" />
     <Content Include="Views\Home\CustomerComplete.cshtml" />
+    <Content Include="Views\Sistema\NovosItens.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

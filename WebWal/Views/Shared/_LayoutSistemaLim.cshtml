@@ -36,9 +36,9 @@
     <script src="~/Scripts/jquery.maskedinput.js"></script>
 
 
-    <script src="~/Content/TemplateLim23-dark/global_assets/js/demo_pages/form_checkboxes_radios.js"></script>
+    @*<script src="~/Content/TemplateLim23-dark/global_assets/js/demo_pages/form_checkboxes_radios.js"></script>*@
 
-    <script src="~/Content/TemplateLim23-dark/global_assets/js/demo_pages/user_pages_profile_tabbed.js"></script>
+    @*<script src="~/Content/TemplateLim23-dark/global_assets/js/demo_pages/user_pages_profile_tabbed.js"></script>*@
 
     <!-- /core JS files -->
     <!-- Theme JS files -->
@@ -52,8 +52,9 @@
     <!-- Main navbar -->
     <div class="navbar navbar-expand-md navbar-light fixed-top">
         <div class="navbar-brand">
-            <a href="../full/index.html" class="d-inline-block">
+            <a href="@Url.Action("CustomerNew","Home")" class="d-inline-block">
                 <img src="~/Content/TemplateLim23-dark/global_assets/images/logo_light.png" alt="">
+                @*<img  class="img-fluid" src="~/Content/TemplateAk/img/core-img/logo-letras.png" />*@
             </a>
         </div>
 
@@ -92,8 +93,8 @@
 
                 <li class="nav-item dropdown dropdown-user">
                     <a href="#" class="navbar-nav-link d-flex align-items-center dropdown-toggle" data-toggle="dropdown">
-                        <img src="../../../../global_assets/images/image.png" class="rounded-circle mr-2" height="34" alt="">
-                        <span>Victoria</span>
+                        <img src="~/Content/TemplateLim23-dark/global_assets/images/image.png" class="rounded-circle mr-2" height="34" alt="">
+                        <span>@ViewBag.Usuario.Nome</span>
                     </a>
 
                     <div class="dropdown-menu dropdown-menu-right">
@@ -102,7 +103,7 @@
                         <a href="#" class="dropdown-item"><i class="icon-comment-discussion"></i> Messages <span class="badge badge-pill bg-blue ml-auto">58</span></a>
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item"><i class="icon-cog5"></i> Account settings</a>
-                        <a href="#" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
+                        <a href="@Url.Action("Index","Home")" class="dropdown-item"><i class="icon-switch2"></i> Logout</a>
                     </div>
                 </li>
             </ul>
@@ -164,13 +165,13 @@
                                 <span>Dashboard</span>
                             </a>
                         </li>
-                        <li class="nav-item nav-item-submenu nav-item-expanded nav-item-open">
+                        <li id="AdminClienteMenu" class="nav-item nav-item-submenu nav-item-expanded">
                             <a href="#" class="nav-link"><i class="icon-stack"></i> <span>Clientes</span></a>
 
-                            <ul class="nav nav-group-sub" data-submenu-title="Starter kit">
-                                <li class="nav-item"><a href="@Url.Action("CustomerNew","Home")" class="nav-link">Novo Cliente</a></li>
-                                <li class="nav-item"><a href="@Url.Action("Customer","Home")" class="nav-link">Meus Clientes</a></li>
-                                <li class="nav-item"><a href="@Url.Action("CustomerAppointment","Home")" class="nav-link">Tratamentos</a></li>
+                            <ul class="nav nav-group-sub" data-submenu-title="CLIENTES">
+                                <li class="nav-item"><a  id="novoClienteMenu"  href="@Url.Action("CustomerNew","Home")" class="nav-link">Novo Cliente</a></li>
+                                <li  class="nav-item"><a id="meusClientesMenu" href="@Url.Action("Customer","Home")" class="nav-link">Meus Clientes</a></li>
+                                <li class="nav-item"><a  id="tratamentosMenu"  href="@Url.Action("CustomerAppointment","Home")" class="nav-link">Tratamentos</a></li>
                                 @*<li class="nav-item nav-item-submenu">
                                         <a href="#" class="nav-link">2 sidebars</a>
                                         <ul class="nav nav-group-sub">
@@ -200,13 +201,16 @@
                                     <li class="nav-item"><a href="../seed/layout_fixed.html" class="nav-link">Fixed layout</a></li>*@
                             </ul>
                         </li>
-                        @*<li class="nav-item">
-                                <a href="../full/changelog.html" class="nav-link">
-                                    <i class="icon-list-unordered"></i>
-                                    <span>Changelog</span>
-                                    <span class="badge bg-blue-400 align-self-center ml-auto">2.3</span>
-                                </a>
-                            </li>*@
+                       <li id="AdminSistema" class="nav-item nav-item-submenu nav-item-expanded">
+                            <a href="#" class="nav-link"><i class="icon-stack"></i> <span>Admin Sistema</span></a>
+
+                            <ul class="nav nav-group-sub" data-submenu-title="Admin Sistema">
+                                <li class="nav-item"><a  id="novosItens"  href="@Url.Action("NovosItens","Sistema")" class="nav-link">Add Itens</a></li>
+                                @*<li  class="nav-item"><a id="meusClientesMenu" href="@Url.Action("Customer","Home")" class="nav-link">Meus Clientes</a></li>
+                                <li class="nav-item"><a  id="tratamentosMenu"  href="@Url.Action("CustomerAppointment","Home")" class="nav-link">Tratamentos</a></li>*@
+                             </ul>
+                        </li>
+                        
                         <!-- /main -->
 
                     </ul>
@@ -254,7 +258,7 @@
     <script src="~/Scripts/MyScripts/AdmCliente.js"></script>
     <script src="~/Scripts/MyScripts/AdmConsultaCliente.js"></script>
     <script src="~/Scripts/MyScripts/AdmTratamento.js"></script>
-
+    <script src="~/Scripts/MyScripts/NovosItens.js"></script>
 
 </body>
 </html>

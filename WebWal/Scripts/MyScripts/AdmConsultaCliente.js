@@ -5,7 +5,9 @@
     if (urlAtual === "/Home/Customer") {
 
         obterListaCliente();
-      
+        $('#AdminClienteMenu').addClass('nav-item-open');
+        $("#meusClientesMenu").css("background-color", "#5c6c92")
+        $('.navbar-nav-link.sidebar-control').click();
     }
 
 
