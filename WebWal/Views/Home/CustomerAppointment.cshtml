@@ -49,9 +49,9 @@
                         <div class="form-group">
 
                             <div class="form-group">
-                                <label class="d-block">Fixed width select</label>
+                                <label class="d-block">Informe o CPF do Cliente</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control border-right-0" placeholder="Teal button">
+                                    <input id="txtCpfBusca" type="text" class="form-control border-right-0 maskCpf" placeholder="CPF ...">
                                     <span class="input-group-append">
                                         <button class="btn bg-teal" type="button" id="btnGetCliente">Buscar Cliente</button>
                                     </span>
@@ -71,9 +71,9 @@
         </div>
 
         <div class="col-md-12">
-            <div class="card">
+            <div class="card" id="frmTratamento" style="display:none">
                 <div class="card-header header-elements-inline">
-                    <h6 class="card-title">Formularios</h6>
+                    <h6 id="cabClienteForm" class="card-title">Formulario de </h6>
                     <div class="header-elements">
                         <div class="list-icons">
                             <a class="list-icons-item" data-action="collapse"></a>
@@ -360,17 +360,18 @@
                             <div class="card">
                                 <div class="card-body">
                                     <p>
-                                        Eu <strong>(NOME)</strong> declaro ter sido informado(a) claramente e ciente sobre
-                                        todos
-                                        os benefícios,
-                                        os riscos, as indicações, contra-indicações, principais efeitos colaterais e
-                                        advertências gerais, relacionados ao tratamento estético. Comprometo-me a seguir
-                                        todas
-                                        as orientações e a fazer uso de todos os produtos contidos em minha prescrição
-                                        domiciliar. As declarações acima são verdadeiras, não cabendo ao profissional a
-                                        Responsaabilidade por informações omitidas.
+                                        Eu <strong class="nomeCliente">(NOME)</strong> declaro ter sido informado(a) claramente e ciente sobre todos os benefícios, os riscos, as indicações, contra-indicações, principais efeitos colaterais e advertências gerais, relacionados ao tratamento estético.
+                                    </p>
+                                    <p>
+                                        Comprometo-me a seguir todas as orientações e a fazer uso de todos os produtos contidos em minha prescrição domiciliar. As declarações acima são verdadeiras, não cabendo ao profissional a responsabilidade por informações omitidas.
+                                    </p>
+                                    <p>
+                                        As declarações acima são verdadeiras, não cabendo ao profissional a responsabilidade por informações omitidas.
                                     </p>
 
+                                    <br />
+                                    <br />
+                                    <p class="dataAtual"></p>
 
                                     <!-- ASSINATURA MANUAL NO DOCUMENTO -->
                                     <div>
@@ -386,16 +387,6 @@
                                     </div>
                                 </div>
 
-
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
 
@@ -403,95 +394,137 @@
                             <div class="card">
                                 <div class="card-body">
                                     <p>
-
-                                        Pelo presente termo, eu autorizo a realização dos procedimentos contratados conforme
-                                        consta em contrato pela profissional <strong>(NOME)</strong> devidamente
-                                        habilidada(o).
+                                        Pelo presente termo, eu <strong class="nomeCliente">(NOME)</strong>, autorizo a realização dos procedimentos contratados conforme consta em contrato pela profissional <strong>Dra. Waldirene Pereira Mendes</strong>, devidamente habilitada.
                                     </p>
 
                                     <p>
-                                        Os procedimentos de aplicação via injeta=ável foi totalmente explicado e eu entendi
-                                        a
-                                        natureza e consequências do procedimento.
+                                        Os procedimentos de aplicação via injetável foram totalmente explicados, e eu entendi a natureza e consequências do procedimento.
                                     </p>
 
                                     <p>
-                                        Alguns efeitos adversos ou secundários podem ocorrer após a aplicação, com pequenas
-                                        marcas transitórias nos locais ou pontos de aplicação, enrijecimento de pele,
-                                        hematomas,
-                                        inflamação ou reações indesejadas. Esses eventos geralmente são transitórios e
-                                        reversíveis.
+                                        Alguns efeitos adversos ou secundários podem ocorrer após a aplicação, como pequenas marcas transitórias nos locais ou pontos de aplicação, enrijecimento da pele, hematomas, inflamação ou reações indesejadas. Esses eventos geralmente são transitórios e reversíveis.
                                     </p>
 
                                     <p>
-                                        Estou ciente que todos os pacientes que estão em tratamento com antibióticos do tipo
-                                        espectinomicida ou aminoglicosídeos, que possuem enfermidades neuromusculares
-                                        graves,
-                                        grávidas, mulheres em período de lactação, com infecções ou sinais de inflamação nos
-                                        locais de aplicação não podem ser submetidos a aplicação, e informo que não me
-                                        enquadro
-                                        nessas limitações.
+                                        Estou ciente de que pacientes em tratamento com antibióticos do tipo espectinomicida ou aminoglicosídeos, que possuem enfermidades neuromusculares graves, grávidas, mulheres em período de lactação, com infecções ou sinais de inflamação nos locais de aplicação, não podem ser submetidos à aplicação. Informo que não me enquadro nessas limitações.
                                     </p>
 
                                     <p>
-                                        Estou ciente que a duração do resultado pode variar de acordo com cada paciente, uma
-                                        vez
-                                        que cada organismo reage de maneira diferente, podendo variar de 2 a 8 meses e em
-                                        casos
-                                        isolados até 1 ano e meio, e que os efeitos iniciais são observados a partir de 72
-                                        horas, tendo seu efeito total em 30 dias. Estou ciente que a prática estética não é
-                                        uma
-                                        ciência exata e reconheço que apesar de ter sido informada, entendo que as
-                                        possibilidades absolutas e relativas de que se atingir os objetivos não são
-                                        garantidos.
-                                        Estou ciente que não existe resultado definitivo e garantido. Fui claramente
-                                        informada(o) das seguintes contradições, potenciais efeitos adversos e riscos: Os
-                                        sintomas adversos mais comuns são: rejeição, necrose ou nódulos regionais, tontura,
-                                        fraqueza, cansaço, mal-estar, náuseas, boca seca, sensibilidade à luz, reações
-                                        alérgicas
-                                        na pele.
+                                        Estou ciente de que a duração do resultado pode variar de acordo com cada paciente, uma vez que cada organismo reage de maneira diferente, podendo variar de 2 a 8 meses e, em casos isolados, até 1 ano e meio. Os efeitos iniciais são observados a partir de 72 horas, tendo seu efeito total em 30 dias. Estou ciente de que a prática estética não é uma ciência exata, e reconheço que, apesar de ter sido informada(o), entendo que as possibilidades absolutas e relativas de atingir os objetivos não são garantidas. Estou ciente de que não existe resultado definitivo e garantido. Fui claramente informada(o) das seguintes contraindicações, potenciais efeitos adversos e riscos: Os sintomas adversos mais comuns são rejeição, necrose ou nódulos regionais, tontura, fraqueza, cansaço, mal-estar, náuseas, boca seca, sensibilidade à luz, reações alérgicas na pele.
                                     </p>
 
                                     <p>
-                                        Autorizo o registro de foto do procedimento por compreender que além de ser uma
-                                        prática
-                                        legal, representa uma alternativa importante de esclarecimento das informações
-                                        prestadas
-                                        à
-                                        conduta proposta.
+                                        Autorizo o registro de fotos do procedimento por compreender que, além de ser uma prática legal, representa uma alternativa importante de esclarecimento das informações prestadas à conduta proposta.
                                     </p>
 
                                     <p>
-                                        Autorizo que as mesmas sejam exibidas em palestras, congressos e eventos
-                                        científicos,
-                                        redes sociais desde que a minha identidade seja preservada.
+                                        Autorizo que as mesmas sejam exibidas em palestras, congressos e eventos científicos, redes sociais, desde que minha identidade seja preservada.
                                     </p>
 
                                     <p>
-                                        declaro ter recebido por escrito todas as orientações pré e pós procedimento.
+                                        Declaro ter recebido por escrito todas as orientações pré e pós-procedimento.
                                     </p>
 
                                     <p>
-                                        Declaro que nada omiti em relação a minha saúde e que esta declaração passe a fazer
-                                        parte da minha ficha clínica, o profissional da saúde está autorizado a utilizar em
-                                        qualquer época no amparo e na defesa de seus direitos. Tive a oportunidade de
-                                        esclarecer
-                                        minhas dúvidas relativas ao procedimento a qual irei me submeter, tendo lido e
-                                        compreendido as informações deste documento. Assumo ter lido este termo de
-                                        consentimento
-                                        e entendo totalmente seu conteúdo. Autorizo ao profissional da saúde a realizar o
-                                        procedimento em mim.
+                                        Declaro que nada omiti em relação à minha saúde e que esta declaração passe a fazer parte da minha ficha clínica. O profissional da saúde está autorizado a utilizar em qualquer época no amparo e na defesa de seus direitos. Tive a oportunidade de esclarecer minhas dúvidas relativas ao procedimento ao qual irei me submeter, tendo lido e compreendido as informações deste documento. Assumo ter lido este termo de consentimento e entendo totalmente seu conteúdo. Autorizo o profissional da saúde a realizar o procedimento em mim.
                                     </p>
 
                                     <p>
-                                        Tenho ciência também que por ser tratar de procedimentos estéticos, estes dependes
-                                        de
-                                        vários outros fatores ligados ao meu estilo de vida, organismo e genética, não tendo
-                                        nenhuma responsabilidade por insatisfação de minha parte o profissional responsável
-                                        pelos procedimentos.
+                                        Tenho ciência também de que, por se tratar de procedimentos estéticos, estes dependem de vários outros fatores ligados ao meu estilo de vida, organismo e genética, não tendo nenhuma responsabilidade por insatisfação de minha parte o profissional responsável pelos procedimentos.
                                     </p>
 
-                                    <p>Data: </p>
+                                    @*<p>
+
+            Pelo presente termo, eu <strong class="nomeCliente">(NOME)</strong>, autorizo a realização dos procedimentos contratados conforme
+            consta em contrato pela profissional <strong> Dra. Waldirene Pereira Mendes</strong> devidamente
+            habilidada.
+        </p>
+
+        <p>
+            Os procedimentos de aplicação via injeta=ável foi totalmente explicado e eu entendi
+            a
+            natureza e consequências do procedimento.
+        </p>
+
+        <p>
+            Alguns efeitos adversos ou secundários podem ocorrer após a aplicação, com pequenas
+            marcas transitórias nos locais ou pontos de aplicação, enrijecimento de pele,
+            hematomas,
+            inflamação ou reações indesejadas. Esses eventos geralmente são transitórios e
+            reversíveis.
+        </p>
+
+        <p>
+            Estou ciente que todos os pacientes que estão em tratamento com antibióticos do tipo
+            espectinomicida ou aminoglicosídeos, que possuem enfermidades neuromusculares
+            graves,
+            grávidas, mulheres em período de lactação, com infecções ou sinais de inflamação nos
+            locais de aplicação não podem ser submetidos a aplicação, e informo que não me
+            enquadro
+            nessas limitações.
+        </p>
+
+        <p>
+            Estou ciente que a duração do resultado pode variar de acordo com cada paciente, uma
+            vez
+            que cada organismo reage de maneira diferente, podendo variar de 2 a 8 meses e em
+            casos
+            isolados até 1 ano e meio, e que os efeitos iniciais são observados a partir de 72
+            horas, tendo seu efeito total em 30 dias. Estou ciente que a prática estética não é
+            uma
+            ciência exata e reconheço que apesar de ter sido informada, entendo que as
+            possibilidades absolutas e relativas de que se atingir os objetivos não são
+            garantidos.
+            Estou ciente que não existe resultado definitivo e garantido. Fui claramente
+            informada(o) das seguintes contradições, potenciais efeitos adversos e riscos: Os
+            sintomas adversos mais comuns são: rejeição, necrose ou nódulos regionais, tontura,
+            fraqueza, cansaço, mal-estar, náuseas, boca seca, sensibilidade à luz, reações
+            alérgicas
+            na pele.
+        </p>
+
+        <p>
+            Autorizo o registro de foto do procedimento por compreender que além de ser uma
+            prática
+            legal, representa uma alternativa importante de esclarecimento das informações
+            prestadas
+            à
+            conduta proposta.
+        </p>
+
+        <p>
+            Autorizo que as mesmas sejam exibidas em palestras, congressos e eventos
+            científicos,
+            redes sociais desde que a minha identidade seja preservada.
+        </p>
+
+        <p>
+            declaro ter recebido por escrito todas as orientações pré e pós procedimento.
+        </p>
+
+        <p>
+            Declaro que nada omiti em relação a minha saúde e que esta declaração passe a fazer
+            parte da minha ficha clínica, o profissional da saúde está autorizado a utilizar em
+            qualquer época no amparo e na defesa de seus direitos. Tive a oportunidade de
+            esclarecer
+            minhas dúvidas relativas ao procedimento a qual irei me submeter, tendo lido e
+            compreendido as informações deste documento. Assumo ter lido este termo de
+            consentimento
+            e entendo totalmente seu conteúdo. Autorizo ao profissional da saúde a realizar o
+            procedimento em mim.
+        </p>
+
+        <p>
+            Tenho ciência também que por ser tratar de procedimentos estéticos, estes dependes
+            de
+            vários outros fatores ligados ao meu estilo de vida, organismo e genética, não tendo
+            nenhuma responsabilidade por insatisfação de minha parte o profissional responsável
+            pelos procedimentos.
+        </p>*@
+                                    <br />
+                                    <br />
+
+                                    <p class="dataAtual"></p>
 
 
                                     <!-- ASSINATURA MANUAL NO DOCUMENTO -->
@@ -540,21 +573,21 @@
 
 
                                     @*<div class="form-group">
-                                        <label>Escolha o Tratamento:</label>
-                                        <select multiple="multiple" class="form-control select" data-fouc>
+                                            <label>Escolha o Tratamento:</label>
+                                            <select multiple="multiple" class="form-control select" data-fouc>
 
-                                            <option value="AZ" selected>Botox</option>
-                                            <option value="CO">Colorado</option>
-                                            <option value="ID">Idaho</option>
-                                            <option value="WY">Wyoming</option>
+                                                <option value="AZ" selected>Botox</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="WY">Wyoming</option>
 
-                                            <option value="AL">Alabama</option>
-                                            <option value="IA" selected>Iowa</option>
-                                            <option value="KS" selected>Kansas</option>
-                                            <option value="KY">Kentucky</option>
+                                                <option value="AL">Alabama</option>
+                                                <option value="IA" selected>Iowa</option>
+                                                <option value="KS" selected>Kansas</option>
+                                                <option value="KY">Kentucky</option>
 
-                                        </select>
-                                    </div>*@
+                                            </select>
+                                        </div>*@
 
                                 </div>
                             </div>
@@ -679,7 +712,7 @@
 
 
                                                 <div class="input-group">
-                                                    <input id="txtValor" type="text" class="form-control border-right-0" placeholder="Valor total do tratamento.." >
+                                                    <input id="txtValor" type="text" class="form-control border-right-0" placeholder="Valor total do tratamento..">
 
                                                 </div>
 
@@ -726,20 +759,20 @@
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input id="checkCartao"  type="checkbox" class="form-check-input-styled" data-fouc>
+                                                        <input id="checkCartao" type="checkbox" class="form-check-input-styled" data-fouc>
                                                         Cartão
                                                     </label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
                                                     <label class="form-check-label">
-                                                        <input  id="checkO" type="checkbox" class="form-check-input-styled" data-fouc>
+                                                        <input id="checkO" type="checkbox" class="form-check-input-styled" data-fouc>
                                                         Outros
                                                     </label>
                                                 </div>
                                             </div>
 
-                                          
-                                           
+
+
                                         </div>
 
                                         <div class="col-md-6">
@@ -747,8 +780,8 @@
                                                 <label>Parcelas</label>
                                                 <select class="form-control select select2-hidden-accessible parcelas" data-fouc="" data-select2-id="1" tabindex="-1" aria-hidden="true">
                                                     <option value="1">A vista</option>
-                                                   
-                                                </select> 
+
+                                                </select>
                                             </div>
 
                                             <div class="mb-3" id="valoresPersonalizados" style="display:none">
@@ -846,3 +879,5 @@
 
 
 </script>
+<script src="~/Content/TemplateLim23-dark/global_assets/js/plugins/ui/moment/moment.min.js"></script>
+<script src="~/Content/TemplateLim23-dark/global_assets/js/plugins/ui/moment/moment_locales.min.js"></script>

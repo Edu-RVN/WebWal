@@ -4,7 +4,8 @@
 
     if (urlAtual === "/Home/CustomerAppointment") {
         getClient()
-
+        moment.locale('pt-br')
+       // var dataAtual = new Date();
         $('#mySelect').select2();
 
         $('#AdminClienteMenu').addClass('nav-item-open');
@@ -33,10 +34,31 @@
 
 function getClient() {
     $("#btnGetCliente").on("click", function () {
-        $("#frmTratamento").css("display", "block");
-        /* exibirRelatorio();*/
         verificarCheck();
+
+        var clienteBusca = {
+            Cpf: $("#txtCpfBusca").val()
+            
+        }
+        requisicaoAssincrona("POST", "../Sistema/ObterClientePorCpf", clienteBusca, sucessObterCliente, errorObterCliente);
+
     });
+}
+
+function sucessObterCliente(Json) {
+    alert()
+    var objCliente = JSON.parse(Json.retorno);
+    var dataFormatada = moment(new Date()).format('dddd, D [de] MMMM [de] YYYY');
+    $("#cabClienteForm").text("Formulário de Tratamento personalizado - " + objCliente.Nome);
+    $(".nomeCliente").text(objCliente.Nome);
+    $(".dataAtual").text("São José dos Campos " +dataFormatada);
+    $("#frmTratamento").css("display", "block");
+}
+
+function errorObterCliente(Json) {
+
+    alert("erro")
+  
 }
 
 function exibirRelatorio() {
@@ -238,9 +260,9 @@ function sucessListaAna(Json) {
    
 }
 function addPagamentoPersonalizado() {
-
+    
     $('#btnAddPag').on('click', function () {
-
+        debugger
         var clone = $('#valoresPersonalizados .row:first').clone();
 
     // Clear input values in the cloned row

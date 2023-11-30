@@ -52,5 +52,25 @@ namespace WebWal.DAL
                 throw new Exception("Usuario nao existe no  Banco de dados", ex);
             }
         }
+        public string ObterClientePorCpf(Cliente cli)
+        {
+            try
+            {
+                string conexaoMongoDB = ConfigurationManager.ConnectionStrings["conexaoMongo"].ConnectionString;
+                var client = new MongoClient(conexaoMongoDB);
+                var db = client.GetDatabase("BANCOWEBWAL");
+                IMongoCollection<Cliente> colecao = db.GetCollection<Cliente>("clienteCompleto");
+                var filtro = Builders<Cliente>.Filter.Where(x => x.Cpf == cli.Cpf);
+                var result = colecao.Find(filtro).FirstOrDefault();
+
+                string Cliente = JsonConvert.SerializeObject(result, Formatting.None);
+                return Cliente;
+            }
+            catch (Exception ex)
+            {
+                return null;
+                throw new Exception("Usuario nao existe no  Banco de dados", ex);
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace WebWal.Controllers
     {
 
         BLL_ItemNovo bllN = new BLL_ItemNovo();
-
+        BLL_Cliente _bllCli = new BLL_Cliente();
         public ActionResult Index()
         {
             return View();
@@ -47,10 +47,24 @@ namespace WebWal.Controllers
                 });
            
 
-        } [HttpPost]
+        }
+        
+        [HttpPost]
         public JsonResult ObterlistaAnamnese()
         {
             var ret = bllN.ObterListaAnamnese();
+                return Json(new
+                {
+                    retorno = ret
+                });
+           
+
+        }
+        
+        [HttpPost]
+        public JsonResult ObterClientePorCpf(Cliente cli)
+        {
+            var ret = _bllCli.ObterClientePorCpf(cli);
                 return Json(new
                 {
                     retorno = ret

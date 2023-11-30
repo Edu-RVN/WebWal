@@ -57,3 +57,7 @@ function avisoNotificacao(texto) {
 //        paginate: { 'first': 'First', 'last': 'Last', 'next': '→', 'previous': '←' }
 //    }
 //});
+
+$(".maskCel").mask("(99) 99999-9999");
+$(".maskCpf").mask("999.999.999-99");
+$(".maskCep").mask("99999-999");

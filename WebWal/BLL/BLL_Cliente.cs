@@ -22,5 +22,11 @@ namespace WebWal.BLL
 
             return ret;
         }
+        public string ObterClientePorCpf(Cliente cli)
+        {
+            var ret = dalCad.ObterClientePorCpf(cli);
+
+            return ret;
+        }
     }
 }
